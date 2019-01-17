@@ -1,1 +1,1 @@
-web: gunicorn SICode.wsgi --log-file -
+web: gunicorn SICode.wsgi:application
