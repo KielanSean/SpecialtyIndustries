@@ -1,1 +1,1 @@
-web: gunicorn SICode.wsgi
+web: gunicorn specialty-industries.wsgi
