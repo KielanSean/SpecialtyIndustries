@@ -25,7 +25,7 @@ SECRET_KEY = '7!5uq4z@_967f&6nk0z$kc6v@8i3=_kmicc3en)@g4ru#!v&!5'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLALLOWED_HOSTS = ['specialty-industries.herokuapp.com']
 
 
 # Application definition
@@ -77,12 +77,12 @@ WSGI_APPLICATION = 'SICode.wsgi.application'
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.mysql',
-        'NAME': 'sys',
-        'USER': 'root',
-        'PASSWORD': 'special',
-        'HOST': '127.0.0.1',
-        'PORT': '3306',
+        'ENGINE': 'django.db.backends.postgresql_psycopg2',
+        'NAME': 'Special',
+        'USER': 'postgres',
+        'PASSWORD': 'specialty',
+        'HOST': 'localhost',
+        'PORT': '5432',
     }
 }
 
