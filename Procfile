@@ -1,1 +1,1 @@
-web: gunicorn specialty-industries.wsgi
+web: gunicorn SICode.wsgi --log-file -

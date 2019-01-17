@@ -12,6 +12,8 @@ https://docs.djangoproject.com/en/2.1/ref/settings/
 
 import os
 import django_heroku
+import whitenoise
+
 
 # Build paths inside the project like this: os.path.join(BASE_DIR, ...)
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
@@ -26,7 +28,7 @@ SECRET_KEY = '7!5uq4z@_967f&6nk0z$kc6v@8i3=_kmicc3en)@g4ru#!v&!5'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLALLOWED_HOSTS = ['secure-savannah-72514.herokuapp.com/']
+ALLALLOWED_HOSTS = ['specialty-industries.herokuapp.com/', '127.0.0.1']
 
 
 # Application definition
@@ -43,12 +45,14 @@ INSTALLED_APPS = [
 
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
+    'whitenoise.middleware.WhiteNoiseMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
     'django.middleware.common.CommonMiddleware',
     'django.middleware.csrf.CsrfViewMiddleware',
     'django.contrib.auth.middleware.AuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
+
 ]
 
 ROOT_URLCONF = 'SICode.urls'
@@ -131,3 +135,7 @@ LOGOUT_REDIRECT_URL = 'home'
 
 # Activate Django-Heroku.
 django_heroku.settings(locals())
+
+STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
+
+STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
