@@ -1,1 +1,1 @@
-web: gunicorn .wsgi:application
+web: python SICode/manage.py runserver
