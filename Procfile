@@ -1,1 +1,1 @@
-web: gunicorn SIcode.SICode.wsgi:application
+web: gunicorn .wsgi:application
