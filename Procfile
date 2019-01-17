@@ -1,1 +1,1 @@
-web: python SICode/manage.py runserver
+web: python SICode/manage.py runserver "0.0.0.0:$PORT"
