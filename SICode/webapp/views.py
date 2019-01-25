@@ -8,7 +8,10 @@ from django.http import HttpResponse, HttpResponseRedirect
 
 
 # Create your views here.
-1
+
+# def index(request):
+#     return render(request, 'webapp/home.html')
+
 def employees(request):
     return render_to_response('employees.html',
                               {'employees': Employee.objects.all()})

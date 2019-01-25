@@ -7,23 +7,23 @@
 <!--<![endif]-->
 
 <head>
+    {% block title %}<title>Specialty Industries Production Tracker</title>{% endblock %}
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>Specialty Industries Production Tracker</title>
+    <!-- <title>Specialty Industries Production Tracker</title> -->
     <meta name="description" content="SI- Production Tracker Login">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-
     <link rel="apple-touch-icon" href="apple-icon.png">
     <link rel="shortcut icon" href="favicon.ico">
 
+    {% load static %}
+	<link rel="stylesheet" href="{% static 'vendors/bootstrap/dist/css/bootstrap.min.css' %}">
+	<link rel="stylesheet" href="{% static 'vendors/font-awesome/css/font-awesome.min.css' %}">
+    <link rel="stylesheet" href="{% static 'vendors/themify-icons/css/themify-icons.css' %}">
+    <link rel="stylesheet" href="{% static 'vendors/flag-icon-css/css/flag-icon.min.css' %}">
+    <link rel="stylesheet" href="{% static 'vendors/selectFX/css/cs-skin-elastic.css' %}">
 
-    <link rel="stylesheet" href="vendors/bootstrap/dist/css/bootstrap.min.css">
-    <link rel="stylesheet" href="vendors/font-awesome/css/font-awesome.min.css">
-    <link rel="stylesheet" href="vendors/themify-icons/css/themify-icons.css">
-    <link rel="stylesheet" href="vendors/flag-icon-css/css/flag-icon.min.css">
-    <link rel="stylesheet" href="vendors/selectFX/css/cs-skin-elastic.css">
-
-    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="{% static 'webapp/css/style.css' %}">
 
     <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,600,700,800' rel='stylesheet' type='text/css'>
 
@@ -39,7 +39,7 @@
             <div class="login-content">
                 <div class="login-logo">
                     <a href="index.html">
-                        <img class="align-content" src="images/pt-image.png" alt="">
+                        <img class="align-content" src="{% static 'webapp\images\pt-image.png' %}" alt="">
                     </a>
                 </div>
                 <div class="login-form">
@@ -58,7 +58,7 @@
                             </label>
                                     <div class="register-link">
                                         <label class="pull-right ">
-                                            <a href="page-forget.html">Forgotten Password?</a>
+                                            <a href="webapp/page-forget.html">Forgotten Password?</a>
                                         </label>
                                     </div>
 
@@ -67,7 +67,7 @@
                                 <button type="submit" class="btn btn-dark btn-flat m-b-30 m-t-30">Sign in</button>
                                
                                 <div class="register-link m-t-15 text-center">
-                                    <p>Don't have account ? <a href="page-register.html"> Sign Up Here</a></p>
+                                    <p>Don't have account ? <a href="webapp/page-register.html"> Sign Up Here</a></p>
                                 </div>
                     </form>
                 </div>
@@ -76,10 +76,10 @@
     </div>
 
 
-    <script src="vendors/jquery/dist/jquery.min.js"></script>
-    <script src="vendors/popper.js/dist/umd/popper.min.js"></script>
-    <script src="vendors/bootstrap/dist/js/bootstrap.min.js"></script>
-    <script src="assets/js/main.js"></script>
+    <script src="{% static 'vendors/jquery/dist/jquery.min.js' %}"></script>
+    <script src="{% static 'vendors/popper.js/dist/umd/popper.min.js' %}"></script>
+    <script src="{% static 'vendors/bootstrap/dist/js/bootstrap.min.js' %}"></script>
+    <script src="{% static 'webapp/js/main.js' %}"></script>
 
 
 </body>

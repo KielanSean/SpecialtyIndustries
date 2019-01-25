@@ -1,11 +1,7 @@
-from django.urls import path
-from django.conf.urls import include, url
-from django.views.generic import TemplateView
-
-import webapp
-from webapp import views
+from django.conf.urls import url, include
+from . import views
 
 
 urlpatterns = [
-
+    ##url(r'^$', views.index, name='index'),
 ]
