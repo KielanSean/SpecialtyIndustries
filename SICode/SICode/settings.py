@@ -128,7 +128,7 @@ USE_TZ = True
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/2.1/howto/static-files/
 
-STATIC_URL = 'webapp/static/'
+STATIC_URL = '/static/'
 
 LOGIN_REDIRECT_URL = 'home'
 LOGOUT_REDIRECT_URL = 'home'
@@ -136,7 +136,7 @@ LOGOUT_REDIRECT_URL = 'home'
 # Activate Django-Heroku.
 django_heroku.settings(locals())
 
-STATIC_ROOT = os.path.join(BASE_DIR, 'webapp/')
+STATIC_ROOT = os.path.join(BASE_DIR, 'webapp/static')
 
 STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
 
