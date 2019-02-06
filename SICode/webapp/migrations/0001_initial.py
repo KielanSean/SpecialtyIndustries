@@ -24,15 +24,5 @@ class Migration(migrations.Migration):
                 ('phone_num', models.CharField(db_index=True, max_length=15)),
             ],
         ),
-        migrations.CreateModel(
-            name='Standard',
-            fields=[
-                #('id', models.AutoField(auto_created=True, primary_key=True, serialize=False, verbose_name='ID')),
-                ('standard_id', models.CharField(db_index=True, max_length=30)),
-                ('job_name', models.CharField(db_index=True, max_length=30)),
-                ('units_equal', models.IntegerField(db_index=True)),
-                ('num_steps', models.IntegerField(db_index=True)),
-            ],
-        ),
 
     ]
