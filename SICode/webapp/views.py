@@ -3,7 +3,7 @@ from django.template import RequestContext
 from django.template.backends import django
 from django.template.context_processors import csrf
 
-from webapp.models import Employee, EmployeeForm
+from webapp.models import Employee, EmployeeForm, Standard, StandardForm
 from django.http import HttpResponse, HttpResponseRedirect
 
 
@@ -15,6 +15,11 @@ from django.http import HttpResponse, HttpResponseRedirect
 def employees(request):
     return render_to_response('employees.html',
                               {'employees': Employee.objects.all()})
+
+
+# def standards(requesr):
+#     return render_to_response('standards': Standard.objects.all())
+
 
 def employee(request, emp_id=1):
     return render_to_response('webapp/employee.html',
@@ -37,3 +42,11 @@ def create(request):
         # args.update(csrf(request))
         # return render(request,'create_employee.html', args)
         return render_to_response('create_employee.html', {'form': form}, context_instance=RequestContext(request))
+
+
+def forgot(request):
+    return render(request, 'webapp/page-forget.html')
+
+def signup(request):
+    return render(request, 'webapp/page-register.html')
+

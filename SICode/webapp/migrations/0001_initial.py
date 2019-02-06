@@ -14,8 +14,8 @@ class Migration(migrations.Migration):
         migrations.CreateModel(
             name='Employee',
             fields=[
-                ('f_name', models.CharField(db_index=True, max_length=30)),
-                ('l_name', models.CharField(db_index=True, max_length=30)),
+                ('first_name', models.CharField(db_index=True, max_length=30)),
+                ('last_name', models.CharField(db_index=True, max_length=30)),
                 ('emp_id', models.CharField(db_index=True, max_length=9, primary_key=True, serialize=False)),
                 ('address', models.CharField(db_index=True, max_length=30)),
                 ('date_of_birth', models.DateField(blank=True, db_index=True, null=True)),

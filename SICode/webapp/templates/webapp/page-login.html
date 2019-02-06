@@ -58,7 +58,7 @@
                             </label>
                                     <div class="register-link">
                                         <label class="pull-right ">
-                                            <a href="webapp/page-forget.html">Forgotten Password?</a>
+                                            <a href="{% url 'forgot' %}">Forgotten Password?</a>
                                         </label>
                                     </div>
 
@@ -67,7 +67,7 @@
                                 <button type="submit" class="btn btn-dark btn-flat m-b-30 m-t-30">Sign in</button>
                                
                                 <div class="register-link m-t-15 text-center">
-                                    <p>Don't have account ? <a href="webapp/page-register.html"> Sign Up Here</a></p>
+                                    <p>Don't have account ? <a href="{% url 'signup' %}"> Sign Up Here</a></p>
                                 </div>
                     </form>
                 </div>
