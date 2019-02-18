@@ -9,24 +9,23 @@
 <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>Production Tracker Dashboard</title>
+    {% block title %}<title>Production Tracker Dashboard</title>{% endblock %}
     <meta name="description" content="Specialty Industries Production Tracker">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
-    <link rel="apple-touch-icon" href="apple-icon.png">
+    {% load static %}
+    <!-- vendors -->
+    <link rel="apple-touch-icon" href="{% static 'apple-icon.png' %}">
     <link rel="shortcut icon" href="favicon.ico">
-
-    <link rel="stylesheet" href="vendors/bootstrap/dist/css/bootstrap.min.css">
-    <link rel="stylesheet" href="vendors/font-awesome/css/font-awesome.min.css">
-    <link rel="stylesheet" href="vendors/themify-icons/css/themify-icons.css">
-    <link rel="stylesheet" href="vendors/flag-icon-css/css/flag-icon.min.css">
-    <link rel="stylesheet" href="vendors/selectFX/css/cs-skin-elastic.css">
-    <link rel="stylesheet" href="vendors/jqvmap/dist/jqvmap.min.css">
-
-
-
-    <link rel="stylesheet" href="assets/css/style.css">
-
+    <link rel="stylesheet" href="{% 'vendors/bootstrap/dist/css/bootstrap.min.css %}">
+    <link rel="stylesheet" href="{% vendors/font-awesome/css/font-awesome.min.css %}">
+    <link rel="stylesheet" href="{% vendors/themify-icons/css/themify-icons.css %}">
+    <link rel="stylesheet" href="{% vendors/flag-icon-css/css/flag-icon.min.css %}">
+    <link rel="stylesheet" href="{% vendors/selectFX/css/cs-skin-elastic.css %}">
+    <link rel="stylesheet" href="{% vendors/jqvmap/dist/jqvmap.min.css %}">
+    <!-- css-->
+    <link rel="stylesheet" href="assets/css/style.css %}">
+    <!-- custom font-->
     <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,600,700,800' rel='stylesheet' type='text/css'>
 
 </head>
@@ -112,6 +111,7 @@
                           
             <div class="media-container-row">
                 <div class="mb-4 content-container col-md-12">
+                    <img src="images/si-logo.png" style="height:150px; padding-left:150px;" alt="Specialty Industries Logo" />
                     <h1 class="mbr-section-title pb-3 mbr-fonts-style align-center display-3">PRODUCTION TRACKER</h1>
                     <p class="mbr-text pb-3 mbr-fonts-style p-descr align-center display-5 col-sm-10">
                         Welcome to the Specialty Industries Production Tracker. The production tracker will enable you to track your daily production logs within the system and manage the week more efficently.
@@ -182,18 +182,18 @@
 
     <!-- Right Panel -->
 
-    <script src="vendors/jquery/dist/jquery.min.js"></script>
-    <script src="vendors/popper.js/dist/umd/popper.min.js"></script>
-    <script src="vendors/bootstrap/dist/js/bootstrap.min.js"></script>
-    <script src="assets/js/main.js"></script>
+    <script src="{% static 'vendors/jquery/dist/jquery.min.js' %}"></script>
+    <script src="{% static 'vendors/popper.js/dist/umd/popper.min.js' %}"></script>
+    <script src="{% static 'vendors/bootstrap/dist/js/bootstrap.min.js' %}"></script>
+    <script src="{% static 'assets/js/main.js"></script>
 
 
-    <script src="vendors/chart.js/dist/Chart.bundle.min.js"></script>
-    <script src="assets/js/dashboard.js"></script>
-    <script src="assets/js/widgets.js"></script>
-    <script src="vendors/jqvmap/dist/jquery.vmap.min.js"></script>
-    <script src="vendors/jqvmap/examples/js/jquery.vmap.sampledata.js"></script>
-    <script src="vendors/jqvmap/dist/maps/jquery.vmap.world.js"></script>
+    <script src="{% static 'vendors/chart.js/dist/Chart.bundle.min.js' %}"></script>
+    <script src="{% static 'assets/js/dashboard.js' %}"></script>
+    <script src="{% static 'assets/js/widgets.js' %}"></script>
+    <script src="{% static 'vendors/jqvmap/dist/jquery.vmap.min.js' %}"></script>
+    <script src="{% static 'vendors/jqvmap/examples/js/jquery.vmap.sampledata.js' %}"></script>
+    <script src="{% static 'vendors/jqvmap/dist/maps/jquery.vmap.world.js' %}"></script>
     <script>
         (function ($) {
             "use strict";
