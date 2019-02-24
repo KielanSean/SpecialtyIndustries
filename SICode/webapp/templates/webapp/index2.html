@@ -13,6 +13,8 @@
     <title>Production Tracker Dashboard</title>{% endblock %}
     <meta name="description" content="Specialty Industries Production Tracker">
     <meta name="viewport" content="width=device-width, initial-scale=1">
+
+
     {% load static %}
     <!-- vendors -->
     <link rel="apple-touch-icon" href="{% static 'apple-icon.png' %}">
@@ -28,12 +30,6 @@
     <!-- custom font-->
     <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,600,700,800' rel='stylesheet' type='text/css'>
 
-
-
-    <link rel="stylesheet" href="assets/css/style.css">
-
-    <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,600,700,800' rel='stylesheet' type='text/css'>
-
 </head>
 
 <body id="div-with-bg">
@@ -43,19 +39,17 @@
 
     <aside id="left-panel" class="left-panel">
         <nav class="navbar navbar-expand-sm navbar-default">
-
-            <div class="navbar-header">
+            </div><!-- /.navbar-collapse --><div class="navbar-header">
                 <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#main-menu" aria-controls="main-menu" aria-expanded="false" aria-label="Toggle navigation">
                     <i class="fa fa-bars"></i>
                 </button>
                 <a class="navbar-brand" href="./"><img src="images/logo.png" alt="Logo"></a>
                 <a class="navbar-brand hidden" href="./"><img src="images/logo2.png" alt="Logo"></a>
             </div>
-
             <div id="main-menu" class="main-menu collapse navbar-collapse">
                 <ul class="nav navbar-nav">
                     <li class="active">
-                        <a href="index.html"> <i class="menu-icon fa fa-dashboard"></i>Administrator Dashboard </a>
+                        <a href="index2.html"> <i class="menu-icon fa fa-dashboard"></i>Administrator Dashboard </a>
                     </li>
                     <h3 class="menu-title">Supervisors</h3><!-- /.menu-title -->
                     <li class="menu-item-has-children dropdown">
@@ -78,7 +72,7 @@
                     <h3 class="menu-title">Administrator</h3><!-- /.menu-title -->
 
                     <li class="menu-item-has-children dropdown">
-                        <a href="#" class="dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"> <i class="menu-icon fa fa-user"></i>Employee Management</a>
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"> <i class="menu-icon fa fa-users"></i>Employee Management</a>
                         <ul class="sub-menu children dropdown-menu">
                             <li><i class="menu-icon fa fa-user-plus"></i><a href="font-fontawesome.html">New Employees</a></li>
                             <li><i class="menu-icon fa fa-wrench"></i><a href="font-fontawesome.html">Modify Employees</a></li>
@@ -88,8 +82,8 @@
                     <li class="menu-item-has-children dropdown">
                         <a href="#" class="dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"> <i class="menu-icon fa fa-book"></i>Standards</a>
                         <ul class="sub-menu children dropdown-menu">
-                            <li><i class="menu-icon fa fa-plus-square"></i><a href="font-fontawesome.html">Create Standards</a></li>
-                            <li><i class="menu-icon fa fa-wrench"></i><a href="charts-flot.html">Modify Standards</a></li>
+                            <li><i class="menu-icon fa fa-plus-square"></i><a href="font-fontawesome.html">New Standards</a></li>
+                            <li><i class="menu-icon fa fa-edit"></i><a href="charts-flot.html">Modify Standards</a></li>
 
                         </ul>
                     </li>
@@ -102,7 +96,15 @@
                             <li><i class="menu-icon fa fa-file-text-o"></i><a href="maps-vector.html">Bi-Monthlies</a></li>
                         </ul>
                     </li>
+                    <h3 class="menu-title">Account</h3><!-- /.menu-title -->
 
+                    <li class="menu-item-has-children dropdown">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"> <i class="menu-icon fa fa-user"></i>Logout</a>
+                        <ul class="sub-menu children dropdown-menu">
+                            <li><i class="menu-icon fa fa-user"></i><a href="font-fontawesome.html">Logout</a></li>
+
+                        </ul>
+                    </li>
                 </ul>
             </div><!-- /.navbar-collapse -->
         </nav>
@@ -146,58 +148,36 @@
                     <img src="images/si-logo.png" style="height:150px; padding-left:150px;" alt="Specialty Industries Logo" />
                     <h1 class="mbr-section-title pb-3 mbr-fonts-style align-center display-3">PRODUCTION TRACKER</h1>
                     <p class="mbr-text pb-3 mbr-fonts-style p-descr align-center display-5 col-sm-10">
-                        Welcome to the Specialty Industries Production Tracker. The production tracker will enable you to track your daily production logs within the system and manage the week more efficently.
-                        Below you will find links to more information about the administrator capabilities within the production tracker.
+                        Welcome to the Specialty Industries Production Tracker. The production tracker will streamline your internal process. Below you will find links to employee management, standard management, and reporting. You may also access
+                        the daily production forms, and the bi-weekly reports. You can also manage your personal account information within the system as well.
                     </p>
                 </div>
             </div>
 
             <br /><br /><br />
-            <div class="col-sm-6 col-lg-3" style="margin-left:20px;">
+            <div class="col-lg-3" style="margin-left:50px;">
 
-                <div class="card text-white" style="background-color:#171B60;">
-                    <br />
-                    <img class="card-img-top mx-auto" src="images/usericon.png" style="height:60px; width:60px; overflow: hidden; " alt="Employee Icon">
-                    <div class="card-body">
-
-
-
-
-                        <h5 class="card-title">Employee Management</h5>
-                        <p class="card-text text-light">Create and manage employees within Specialty Industries.</p>
-                        <p class="card-text text-white"><a href="#" style="color:white;">Learn More</a></p>
-
-                    </div>
-                </div>
+                <span class="fa-stack fa-lg">
+                    <i class="fa fa-circle-thin fa-stack-2x"></i>
+                    <a href="employeehome.html"> <i class="fa fa-users fa-stack-1x"></i></a>
+                </span>
+                <h3 class="heading">Employee Management</h3>
             </div>
-            <div class="col-sm-6 col-lg-3">
+            <div class="col-lg-3">
 
-                <div class="card text-white" style="background-color:#171B60;">
-                    <br />
-                    <img class="card-img-top mx-auto" src="images/standardicon.png" style="height:60px; width:60px; overflow: hidden; " alt="Standard Icon">
-                    <div class="card-body">
-
-
-
-
-                        <h5 class="card-title">Standards Management</h5>
-                        <p class="card-text text-light">Create standards and manage the master standard.</p>
-                        <p class="card-text text-white"><a href="#" style="color:white;">Learn More</a></p>
-
-                    </div>
-                </div>
+                <span class="fa-stack fa-lg">
+                    <i class="fa fa-circle-thin fa-stack-2x"></i>
+                    <a href="standardshome.html"> <i class="fa fa-book fa-stack-1x"></i></a>
+                </span>
+                <h3 class="heading">Standard Management</h3>
             </div>
-            <div class="col-sm-6 col-lg-3">
-                <div class="card text-white" style="background-color:#171B60;">
-                    <br />
-                    <img class="card-img-top mx-auto" src="images/reporticon.png" style="height:60px; width:60px; overflow: hidden; " alt="Report Icon">
-                    <div class="card-body">
-                        <h5 class="card-title">Report Management</h5>
-                        <p class="card-text text-light">Run reports based on the data within the database.</p>
-                        <p class="card-text text-white"><a href="#" style="color:white;">Learn More</a></p>
+            <div class="col-lg-3">
 
-                    </div>
-                </div>
+                <span class="fa-stack fa-lg">
+                    <i class="fa fa-circle-thin fa-stack-2x"></i>
+                    <a href="reportshome.html"> <i class="fa fa-file-text-o fa-stack-1x"></i></a>
+                </span>
+                <h3 class="heading">Reports</h3>
             </div>
         </div>
     </div>
@@ -239,7 +219,6 @@
     <script>
         (function ($) {
             "use strict";
-
             jQuery('#vmap').vectorMap({
                 map: 'world_en',
                 backgroundColor: null,
@@ -258,14 +237,4 @@
 </body>
 
 </html>
-<!DOCTYPE html>
 
-<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
-<head>
-    <meta charset="utf-8" />
-    <title></title>
-</head>
-<body>
-
-</body>
-</html>
