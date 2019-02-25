@@ -9,24 +9,25 @@
 <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>Production Tracker Dashboard</title>
+    {% block title %}
+    <title>Production Tracker Dashboard</title>{% endblock %}
     <meta name="description" content="Specialty Industries Production Tracker">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
-    <link rel="apple-touch-icon" href="apple-icon.png">
+
+    {% load static %}
+    <!-- vendors -->
+    <link rel="apple-touch-icon" href="{% static 'apple-icon.png' %}">
     <link rel="shortcut icon" href="favicon.ico">
-
-    <link rel="stylesheet" href="vendors/bootstrap/dist/css/bootstrap.min.css">
-    <link rel="stylesheet" href="vendors/font-awesome/css/font-awesome.min.css">
-    <link rel="stylesheet" href="vendors/themify-icons/css/themify-icons.css">
-    <link rel="stylesheet" href="vendors/flag-icon-css/css/flag-icon.min.css">
-    <link rel="stylesheet" href="vendors/selectFX/css/cs-skin-elastic.css">
-    <link rel="stylesheet" href="vendors/jqvmap/dist/jqvmap.min.css">
-
-
-
-    <link rel="stylesheet" href="assets/css/style.css">
-
+    <link rel="stylesheet" href="{% 'vendors/bootstrap/dist/css/bootstrap.min.css %}">
+    <link rel="stylesheet" href="{% vendors/font-awesome/css/font-awesome.min.css %}">
+    <link rel="stylesheet" href="{% vendors/themify-icons/css/themify-icons.css %}">
+    <link rel="stylesheet" href="{% vendors/flag-icon-css/css/flag-icon.min.css %}">
+    <link rel="stylesheet" href="{% vendors/selectFX/css/cs-skin-elastic.css %}">
+    <link rel="stylesheet" href="{% vendors/jqvmap/dist/jqvmap.min.css %}">
+    <!-- css-->
+    <link rel="stylesheet" href="assets/css/style.css %}">
+    <!-- custom font-->
     <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,600,700,800' rel='stylesheet' type='text/css'>
 
 </head>
@@ -68,9 +69,17 @@
                             <li><i class="fa fa-list-alt"></i><a href="tables-data.html">Past Bi-Weekly </a></li>
                         </ul>
                     </li>
+                    <h3 class="menu-title">Account</h3><!-- /.menu-title -->
+
+                    <li class="menu-item-has-children dropdown">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"> <i class="menu-icon fa fa-user"></i>Logout</a>
+                        <ul class="sub-menu children dropdown-menu">
+                            <li><i class="menu-icon fa fa-user"></i><a href="font-fontawesome.html">Logout</a></li>
+
+                        </ul>
+                    </li>
 
 
-                    
 
                 </ul>
             </div><!-- /.navbar-collapse -->
@@ -106,59 +115,51 @@
 
 
 
-        
+
 
         <div class="container" style="padding-top:175px; padding-left: 175px">
-                          
+
             <div class="media-container-row">
                 <div class="mb-4 content-container col-md-12">
+                    <img src="images/si-logo.png" style="height:150px; padding-left:150px;" alt="Specialty Industries Logo" />
                     <h1 class="mbr-section-title pb-3 mbr-fonts-style align-center display-3">PRODUCTION TRACKER</h1>
                     <p class="mbr-text pb-3 mbr-fonts-style p-descr align-center display-5 col-sm-10">
                         Welcome to the Specialty Industries Production Tracker. The production tracker will enable you to track your daily production logs within the system and manage the week more efficently.
-                        Below you will find links to more information about the production forms and the bi-weekly reports.
+                        Below you will find links to more information about the production forms, bi-weekly reports and your user information.
                     </p>
                 </div>
             </div>
 
-            <br /><br /><br />
-            <div class="col-sm-6 col-lg-5">
+            <div class="col-lg-3" style="margin-left:50px;">
 
-                <div class="card text-white" style="background-color:#171B60;">
-                    <br />
-                    <img class="card-img-top mx-auto" src="images/pficon.png" style="height:72px; width:72px; overflow: hidden; " alt="Production Form Icon">
-                    <div class="card-body">
-
-
-
-                        
-                        <h5 class="card-title">Production Forms</h5>
-                        <p class="card-text text-light">Create a new production form and view past forms from this week. Click "Learn More" to learn more about the production forms.</p>
-                        <p class="card-text text-white"><a href="#" style="color:white;">Learn More</a></p>
-
-                    </div>
-                </div>
+                <span class="fa-stack fa-lg">
+                    <i class="fa fa-circle-thin fa-stack-2x"></i>
+                    <a href="productionforms.html"> <i class="fa fa-wpforms fa-stack-1x"></i></a>
+                </span>
+                <h3 class="heading">Production Form</h3>
             </div>
+            <div class="col-lg-3">
 
-            <div class="col-sm-6 col-lg-5">
-                <div class="card text-white" style="background-color:#171B60;">
-                    <br />
-                    <img class="card-img-top mx-auto" src="images/biweeklyicon.png" style="height:72px; width:72px; overflow: hidden; " alt="Bi-Weekly Form Icon">
-                    <div class="card-body">
+                <span class="fa-stack fa-lg">
+                    <i class="fa fa-circle-thin fa-stack-2x"></i>
+                    <a href="biweeklyforms.html"> <i class="fa fa-list-alt fa-stack-1x"></i></a>
+                </span>
+                <h3 class="heading">Bi-Weekly Reports</h3>
+            </div>
+            <div class="col-lg-3">
 
-                       
-
-
-                        <h5 class="card-title">Bi-Weekly Reports</h5>
-                        <p class="card-text text-light">Contains current bi-weekly reports. Click "Learn More" to view current bi-weekly report.</p>
-                        <p class="card-text text-white"><a href="#" style="color:white">Learn More</a></p>
-
-                    </div>
-                </div>
+                <span class="fa-stack fa-lg">
+                    <i class="fa fa-circle-thin fa-stack-2x"></i>
+                    <a href="index.html"> <i class="fa fa-user fa-stack-1x"></i></a>
+                </span>
+                <h3 class="heading">Account Management</h3>
             </div>
         </div>
+
+
     </div>
 
- 
+
 
 
 
@@ -182,22 +183,21 @@
 
     <!-- Right Panel -->
 
-    <script src="vendors/jquery/dist/jquery.min.js"></script>
-    <script src="vendors/popper.js/dist/umd/popper.min.js"></script>
-    <script src="vendors/bootstrap/dist/js/bootstrap.min.js"></script>
-    <script src="assets/js/main.js"></script>
+    <script src="{% static 'vendors/jquery/dist/jquery.min.js' %}"></script>
+    <script src="{% static 'vendors/popper.js/dist/umd/popper.min.js' %}"></script>
+    <script src="{% static 'vendors/bootstrap/dist/js/bootstrap.min.js' %}"></script>
+    <script src="{% static 'assets/js/main.js"></script>
 
 
-    <script src="vendors/chart.js/dist/Chart.bundle.min.js"></script>
-    <script src="assets/js/dashboard.js"></script>
-    <script src="assets/js/widgets.js"></script>
-    <script src="vendors/jqvmap/dist/jquery.vmap.min.js"></script>
-    <script src="vendors/jqvmap/examples/js/jquery.vmap.sampledata.js"></script>
-    <script src="vendors/jqvmap/dist/maps/jquery.vmap.world.js"></script>
+    <script src="{% static 'vendors/chart.js/dist/Chart.bundle.min.js' %}"></script>
+    <script src="{% static 'assets/js/dashboard.js' %}"></script>
+    <script src="{% static 'assets/js/widgets.js' %}"></script>
+    <script src="{% static 'vendors/jqvmap/dist/jquery.vmap.min.js' %}"></script>
+    <script src="{% static 'vendors/jqvmap/examples/js/jquery.vmap.sampledata.js' %}"></script>
+    <script src="{% static 'vendors/jqvmap/dist/maps/jquery.vmap.world.js' %}"></script>
     <script>
         (function ($) {
             "use strict";
-
             jQuery('#vmap').vectorMap({
                 map: 'world_en',
                 backgroundColor: null,

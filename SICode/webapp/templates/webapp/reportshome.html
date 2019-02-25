@@ -10,7 +10,7 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     {% block title %}
-    <title>Production Tracker Dashboard</title>{% endblock %}
+    <title>Reports</title>{% endblock %}
     <meta name="description" content="Specialty Industries Production Tracker">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
@@ -39,6 +39,7 @@
 
     <aside id="left-panel" class="left-panel">
         <nav class="navbar navbar-expand-sm navbar-default">
+
             </div><!-- /.navbar-collapse --><div class="navbar-header">
                 <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#main-menu" aria-controls="main-menu" aria-expanded="false" aria-label="Toggle navigation">
                     <i class="fa fa-bars"></i>
@@ -53,15 +54,15 @@
                     </li>
                     <h3 class="menu-title">Supervisors</h3><!-- /.menu-title -->
                     <li class="menu-item-has-children dropdown">
-                        <a href="#" class="dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"> <i class="menu-icon fa fa-wpforms"></i>Production Forms</a>
+                        <a href="productionformsadmin.html" class="dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"> <i class="menu-icon fa fa-wpforms"></i>Production Forms</a>
                         <ul class="sub-menu children dropdown-menu">
-                            <li><i class="fa fa-plus-square"></i><a href="ui-buttons.html">New Form</a></li>
-                            <li><i class="fa fa-caret-square-o-left"></i><a href="ui-badges.html">Past Forms</a></li>
+                            <li><i class="fa fa-plus-square"></i><a href="currentbiweekly.html">New Form</a></li>
+                            <li><i class="fa fa-caret-square-o-left"></i><a href="pastbiweekly.html">Past Forms</a></li>
 
                         </ul>
                     </li>
                     <li class="menu-item-has-children dropdown">
-                        <a href="#" class="dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"> <i class="menu-icon fa fa-list-alt"></i>Bi-Weekly Report</a>
+                        <a href="biweeklyformsadmin.html" class="dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"> <i class="menu-icon fa fa-list-alt"></i>Bi-Weekly Report</a>
                         <ul class="sub-menu children dropdown-menu">
                             <li><i class="fa fa-list-alt"></i><a href="tables-basic.html">Current Bi-Weekly</a></li>
                             <li><i class="fa fa-list-alt"></i><a href="tables-data.html">Past Bi-Weekly </a></li>
@@ -72,34 +73,34 @@
                     <h3 class="menu-title">Administrator</h3><!-- /.menu-title -->
 
                     <li class="menu-item-has-children dropdown">
-                        <a href="#" class="dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"> <i class="menu-icon fa fa-users"></i>Employee Management</a>
+                        <a href="employeehome.html" class="dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"> <i class="menu-icon fa fa-users"></i>Employee Management</a>
                         <ul class="sub-menu children dropdown-menu">
-                            <li><i class="menu-icon fa fa-user-plus"></i><a href="font-fontawesome.html">New Employees</a></li>
-                            <li><i class="menu-icon fa fa-wrench"></i><a href="font-fontawesome.html">Modify Employees</a></li>
+                            <li><i class="menu-icon fa fa-user-plus"></i><a href="newemployee.html">New Employee</a></li>
+                            <li><i class="menu-icon fa fa-wrench"></i><a href="updateemployee.html">Modify Employees</a></li>
                         </ul>
                     </li>
 
                     <li class="menu-item-has-children dropdown">
-                        <a href="#" class="dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"> <i class="menu-icon fa fa-book"></i>Standards</a>
+                        <a href="standardshome.html" class="dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"> <i class="menu-icon fa fa-book"></i>Standards</a>
                         <ul class="sub-menu children dropdown-menu">
-                            <li><i class="menu-icon fa fa-plus-square"></i><a href="font-fontawesome.html">New Standards</a></li>
-                            <li><i class="menu-icon fa fa-edit"></i><a href="charts-flot.html">Modify Standards</a></li>
+                            <li><i class="menu-icon fa fa-plus-square"></i><a href="newstandard.html">New Standard</a></li>
+                            <li><i class="menu-icon fa fa-edit"></i><a href="updatestandards.html">Modify Standards</a></li>
 
                         </ul>
                     </li>
 
                     <li class="menu-item-has-children dropdown">
-                        <a href="#" class="dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"> <i class="menu-icon fa fa-file-text-o"></i>Reports</a>
+                        <a href="reportshome.html" class="dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"> <i class="menu-icon fa fa-file-text-o"></i>Reports</a>
                         <ul class="sub-menu children dropdown-menu">
-                            <li><i class="menu-icon fa fa-users"></i><a href="maps-gmap.html">Attendance</a></li>
-                            <li><i class="menu-icon fa fa-file"></i><a href="maps-vector.html">Quarterly Production</a></li>
-                            <li><i class="menu-icon fa fa-file-text-o"></i><a href="maps-vector.html">Bi-Monthlies</a></li>
+                            <li><i class="menu-icon fa fa-users"></i><a href="attendance.html">Attendance</a></li>
+                            <li><i class="menu-icon fa fa-file"></i><a href="quarterly.html">Quarterly Production</a></li>
+                            <li><i class="menu-icon fa fa-file-text-o"></i><a href="biweeklyreport.html">Bi-Monthlies</a></li>
                         </ul>
                     </li>
                     <h3 class="menu-title">Account</h3><!-- /.menu-title -->
 
                     <li class="menu-item-has-children dropdown">
-                        <a href="#" class="dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"> <i class="menu-icon fa fa-user"></i>Logout</a>
+                        <a href="logout.html" class="dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"> <i class="menu-icon fa fa-user"></i>Logout</a>
                         <ul class="sub-menu children dropdown-menu">
                             <li><i class="menu-icon fa fa-user"></i><a href="font-fontawesome.html">Logout</a></li>
 
@@ -144,40 +145,41 @@
         <div class="container" style="padding-top:175px; padding-left: 175px">
 
             <div class="media-container-row">
-                <div class="mb-4 content-container col-md-12">
-                    <img src="images/si-logo.png" style="height:150px; padding-left:150px;" alt="Specialty Industries Logo" />
-                    <h1 class="mbr-section-title pb-3 mbr-fonts-style align-center display-3">PRODUCTION TRACKER</h1>
-                    <p class="mbr-text pb-3 mbr-fonts-style p-descr align-center display-5 col-sm-10">
-                        Welcome to the Specialty Industries Production Tracker. The production tracker will streamline your internal process. Below you will find links to employee management, standard management, and reporting. You may also access
-                        the daily production forms, and the bi-weekly reports. You can also manage your personal account information within the system as well.
+                <div class="mb-4 content-container ">
+                    <img src="images/si-logo.png" style="height:150px; padding-left:175px;" alt="Specialty Industries Logo" />
+                    <h1 class="mbr-section-title pb-3 mbr-fonts-style align-center display-3" style="padding-left: 275px;">REPORTS</h1>
+                    <p class="mbr-text pb-3 mbr-fonts-style p-descr align-center display-5 col-sm-10" style="padding-left: 50px;">
+                        Welcome to the reporting tool. The reporting tool allows you to pull data from the production tracker into an excel spreadsheet. The reporting tool can provide the attendance report, quarterly production, and is used
+                        to generate the bi-monthly report.
                     </p>
                 </div>
-            </div>
 
-            <br /><br /><br />
-            <div class="col-lg-3" style="margin-left:50px;">
 
-                <span class="fa-stack fa-lg">
-                    <i class="fa fa-circle-thin fa-stack-2x"></i>
-                    <a href="employeehome.html"> <i class="fa fa-users fa-stack-1x"></i></a>
-                </span>
-                <h3 class="heading">Employee Management</h3>
-            </div>
-            <div class="col-lg-3">
+                <br /><br /><br />
+                <div class="col-lg-3" style="margin-left:50px;">
 
-                <span class="fa-stack fa-lg">
-                    <i class="fa fa-circle-thin fa-stack-2x"></i>
-                    <a href="standardshome.html"> <i class="fa fa-book fa-stack-1x"></i></a>
-                </span>
-                <h3 class="heading">Standard Management</h3>
-            </div>
-            <div class="col-lg-3">
+                    <span class="fa-stack fa-lg">
+                        <i class="fa fa-circle-thin fa-stack-2x"></i>
+                        <a href="attendance.html"> <i class="fa fa-users fa-stack-1x"></i></a>
+                    </span>
+                    <h3 class="heading">Attendance</h3>
+                </div>
+                <div class="col-lg-3">
 
-                <span class="fa-stack fa-lg">
-                    <i class="fa fa-circle-thin fa-stack-2x"></i>
-                    <a href="reportshome.html"> <i class="fa fa-file-text-o fa-stack-1x"></i></a>
-                </span>
-                <h3 class="heading">Reports</h3>
+                    <span class="fa-stack fa-lg">
+                        <i class="fa fa-circle-thin fa-stack-2x"></i>
+                        <a href="quarterly.html"> <i class="fa fa-area-chart fa-stack-1x"></i></a>
+                    </span>
+                    <h3 class="heading">Quarterly Production</h3>
+                </div>
+                <div class="col-lg-3">
+
+                    <span class="fa-stack fa-lg">
+                        <i class="fa fa-circle-thin fa-stack-2x"></i>
+                        <a href="biweeklyreport.html"> <i class="fa fa-list-alt fa-stack-1x"></i></a>
+                    </span>
+                    <h3 class="heading">Bi-Weekly Report</h3>
+                </div>
             </div>
         </div>
     </div>
@@ -237,4 +239,3 @@
 </body>
 
 </html>
-

@@ -1,0 +1,35 @@
+CREATE TABLE "employee" (
+  "emp_id" SERIAL NOT NULL,
+  "f_name" VARCHAR(25) NOT NULL,
+  "l_name" VARCHAR(25) NOT NULL,
+  "date_of_birth" DATE NOT NULL,
+  "phone_num" VARCHAR(15) NULL,
+  "address" VARCHAR(45) NULL,
+  "start_date" DATE NOT NULL,
+  "active_status" BOOLEAN DEFAULT FALSE,
+  "account_created" timestamp ,
+  PRIMARY KEY ("emp_id")
+);
+
+CREATE TABLE public.standard
+(
+    standard_id integer NOT NULL primary key,
+    job_name character varying(50) COLLATE pg_catalog."default" NOT NULL,
+    job_desc character varying(300) COLLATE pg_catalog."default",
+    units_equals character varying(50) COLLATE pg_catalog."default",
+    standard_num character varying(7) COLLATE pg_catalog."default" NOT NULL
+)
+
+CREATE TABLE public.step
+(
+    step_id integer NOT NULL DEFAULT nextval('step_step_id_seq'::regclass),
+    standard_id integer NOT NULL DEFAULT nextval('step_standard_id_seq'::regclass),
+    units_hr double_precision NOT NULL,
+    time_each double_precision NOT NULL,
+    piece_rate double_precision,
+    CONSTRAINT step_pkey PRIMARY KEY (step_id),
+    CONSTRAINT standard_id FOREIGN KEY (standard_id)
+        REFERENCES public.standard (standard_id)
+)
+
+SHOW TABLES;
