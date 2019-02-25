@@ -58,3 +58,33 @@ class StandardForm(ModelForm):
             'standard_id': 'Standard Number',
             'job_name': 'Job',
         }
+
+
+class Report(models.Model):
+    step_id = models.CharField(max_length=3, db_index=True, null=True)
+    standard_id = models.CharField(max_length=30, db_index=True)
+    job_name = models.CharField(max_length=30, db_index=True)
+    employee_name = models.CharField(max_length=40, db_index=True)
+    piece_rate = models.IntegerField(db_index=True, null=True)
+    hours = models.IntegerField(db_index=True, null=True)
+    units_produced = models.IntegerField(db_index=True, null=True)
+    absent = models.IntegerField(db_index=True)
+
+class ReportForm(ModelForm):
+    class Meta:
+        model = Report
+        fields = ['step_id', 'piece_rate', 'standard_id', 'job_name', 'employee_name', 'hours', 'units_produced', 'absent']
+        labels = {
+            'step_id': 'Step Number',
+            'piece_rate': 'Piece Rate',
+            'standard_id': 'Standard Number',
+            'job_name': 'Job',
+            'employee_name': 'Employee Name',
+            'hours': 'Hours',
+            'units_produced': 'Units Produced',
+            'absent': 'Absent',
+        }
+
+
+
+
