@@ -9,24 +9,24 @@
 <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    {% block title %}
-    <title>Production Tracker Dashboard</title>{% endblock %}
+    {% block title %}<title>Production Tracker Dashboard</title>{% endblock %}
     <meta name="description" content="Specialty Industries Production Tracker">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
 
     {% load static %}
     <!-- vendors -->
-    <link rel="apple-touch-icon" href="{% static 'apple-icon.png' %}">
+{#    <link rel="apple-touch-icon" href="{% static 'apple-icon.png' %}">#}
+    <link rel="apple-touch-icon" href="apple-icon.png">
     <link rel="shortcut icon" href="favicon.ico">
-    <link rel="stylesheet" href="{% 'vendors/bootstrap/dist/css/bootstrap.min.css %}">
-    <link rel="stylesheet" href="{% vendors/font-awesome/css/font-awesome.min.css %}">
-    <link rel="stylesheet" href="{% vendors/themify-icons/css/themify-icons.css %}">
-    <link rel="stylesheet" href="{% vendors/flag-icon-css/css/flag-icon.min.css %}">
-    <link rel="stylesheet" href="{% vendors/selectFX/css/cs-skin-elastic.css %}">
-    <link rel="stylesheet" href="{% vendors/jqvmap/dist/jqvmap.min.css %}">
+    <link rel="stylesheet" href="{% static 'vendors/bootstrap/dist/css/bootstrap.min.css' %}">
+    <link rel="stylesheet" href="{% static 'vendors/font-awesome/css/font-awesome.min.css' %}">
+    <link rel="stylesheet" href="{% static 'vendors/themify-icons/css/themify-icons.css' %}">
+    <link rel="stylesheet" href="{% static 'vendors/flag-icon-css/css/flag-icon.min.css' %}">
+    <link rel="stylesheet" href="{% static 'vendors/selectFX/css/cs-skin-elastic.css' %}">
+    <link rel="stylesheet" href="{% static 'vendors/jqvmap/dist/jqvmap.min.css' %}">
     <!-- css-->
-    <link rel="stylesheet" href="assets/css/style.css %}">
+    <link rel="stylesheet" href="{% static 'webapp/css/style.css' %}">
     <!-- custom font-->
     <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,600,700,800' rel='stylesheet' type='text/css'>
 
@@ -72,9 +72,9 @@
                     <h3 class="menu-title">Account</h3><!-- /.menu-title -->
 
                     <li class="menu-item-has-children dropdown">
-                        <a href="#" class="dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"> <i class="menu-icon fa fa-user"></i>Logout</a>
+                        <a href="{% url 'logout' %}" class="dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"> <i class="menu-icon fa fa-user"></i>Logout</a>
                         <ul class="sub-menu children dropdown-menu">
-                            <li><i class="menu-icon fa fa-user"></i><a href="font-fontawesome.html">Logout</a></li>
+                            <li><i class="menu-icon fa fa-user"></i><a href="{% url 'logout' %}">Logout</a></li>
 
                         </ul>
                     </li>
@@ -134,7 +134,7 @@
 
                 <span class="fa-stack fa-lg">
                     <i class="fa fa-circle-thin fa-stack-2x"></i>
-                    <a href="productionforms.html"> <i class="fa fa-wpforms fa-stack-1x"></i></a>
+                    <a href="{%  url 'production' %}"> <i class="fa fa-wpforms fa-stack-1x"></i></a>
                 </span>
                 <h3 class="heading">Production Form</h3>
             </div>
@@ -142,7 +142,7 @@
 
                 <span class="fa-stack fa-lg">
                     <i class="fa fa-circle-thin fa-stack-2x"></i>
-                    <a href="biweeklyforms.html"> <i class="fa fa-list-alt fa-stack-1x"></i></a>
+                    <a href="{%  url 'biweekly' %}"> <i class="fa fa-list-alt fa-stack-1x"></i></a>
                 </span>
                 <h3 class="heading">Bi-Weekly Reports</h3>
             </div>
@@ -161,32 +161,12 @@
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
     <!-- Right Panel -->
 
     <script src="{% static 'vendors/jquery/dist/jquery.min.js' %}"></script>
     <script src="{% static 'vendors/popper.js/dist/umd/popper.min.js' %}"></script>
     <script src="{% static 'vendors/bootstrap/dist/js/bootstrap.min.js' %}"></script>
-    <script src="{% static 'assets/js/main.js"></script>
+    <script src="{% static 'assets/js/main.js"></script>' %}"></script>
 
 
     <script src="{% static 'vendors/chart.js/dist/Chart.bundle.min.js' %}"></script>
