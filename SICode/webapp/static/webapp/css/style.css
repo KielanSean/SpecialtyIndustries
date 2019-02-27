@@ -134,6 +134,19 @@
     .switch.switch-default.switch-xs .switch-input:checked ~ .switch-handle {
       left: 10px; }
 
+.fa-stack {
+    color: #939598;
+    font-size: 54px;
+    margin: auto;
+    display: block;
+}
+.heading {
+    text-align: center;
+    padding-bottom: 5px;
+    color: #171B60;
+    font-weight: 400;
+} 
+
 .switch.switch-text {
   position: relative;
   display: inline-block;
@@ -1010,7 +1023,10 @@ aside.left-panel {
   width: 280px;
   -webkit-transition:width 0.3s ease;
   transition: width 0.3s ease; }
-
+#div-with-bg {
+    background-image: url('images/bg.jpg');
+    background-color: rgba(0,0,0,0.1);
+}
 .navbar {
   background: #171b60;
   border-radius: 0;
@@ -1608,7 +1624,10 @@ header .form-inline {
   border-color: transparent transparent;
   color: #ff2e44;
   position: relative; }
-
+a:hover{
+    text-decoration:underline;
+    color:white;
+}
 .custom-tab .nav-tabs > a.active > a:after,
 .custom-tab .nav-tabs > li.active > a:focus:after,
 .custom-tab .nav-tabs > li.active > a:hover:after {
@@ -1668,10 +1687,10 @@ header .form-inline {
   color: #fff; }
 
 .black-ribon {
-  background: url("../../static/webapp/images/twitter_corner_black.png") no-repeat; }
+  background: url("../../images/twitter_corner_black.png") no-repeat; }
 
 .blue-ribon {
-  background: url("../../static/webapp/images/twitter_corner_blue.png") no-repeat; }
+  background: url("../../images/twitter_corner_blue.png") no-repeat; }
 
 .twt-feed .wtt-mark {
   color: rgba(255, 255, 255, 0.15);
