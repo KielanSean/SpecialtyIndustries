@@ -33,6 +33,9 @@
 
 <body class="bg-light">
 
+{% if user.is_authenticated %}
+    <meta http-equiv="REFRESH" content="0; url={% url 'index' %}">
+{% else %}
 
     <div class="si-login d-flex align-content-center flex-wrap">
         <div class="container">
@@ -43,29 +46,34 @@
                     </a>
                 </div>
                 <div class="login-form">
-                    <form>
+                    <form role="form" method="post" action="{% url 'index' %}">
+                    {% csrf_token %}
+
                         <div class="form-group">
-                            <label>Email address</label>
-                            <input type="email" class="form-control" placeholder="Email">
+                        {% if form.errors %}
+                            <div class="alert alert-danger">Your username and password didn't match. Please try again.</div>
+                        {% endif %}
+                            <label class="sr-only" for="username" >Username</label>
+                            <input type="text" class="form-control" id="username" name="username" placeholder="Username" autofocus>
                         </div>
                             <div class="form-group">
-                                <label>Password</label>
-                                <input type="password" class="form-control" placeholder="Password">
+                                <label class="sr-only" for="password">Password</label>
+                                <input type="password" class="form-control" id="password" name="password" placeholder="Password" value="">
                         </div>
                                 <div class="checkbox">
                                     <label>
-                                <input type="checkbox"> Remember Me
-                            </label>
+                                        <input name="remember" type="checkbox" value="Remember Me"> Remember Me
+                                    </label>
                                     <div class="register-link">
                                         <label class="pull-right ">
                                             <a href="{% url 'forgot' %}">Forgotten Password?</a>
                                         </label>
                                     </div>
 
-
                                 </div>
-                                <button type="submit" class="btn btn-dark btn-flat m-b-30 m-t-30">Sign in</button>
-                               
+                                <button type="submit" class="btn btn-dark btn-flat m-b-30 m-t-30" value="Login">Sign in
+                                </button>
+                                <input type="hidden" name="next" value="{% if next %}{{ next }}{% else %}../{% endif %}" />
                                 <div class="register-link m-t-15 text-center">
                                     <p>Don't have account ? <a href="{% url 'signup' %}"> Sign Up Here</a></p>
                                 </div>
@@ -75,6 +83,7 @@
         </div>
     </div>
 
+{% endif %}
 
     <script src="{% static 'vendors/jquery/dist/jquery.min.js' %}"></script>
     <script src="{% static 'vendors/popper.js/dist/umd/popper.min.js' %}"></script>

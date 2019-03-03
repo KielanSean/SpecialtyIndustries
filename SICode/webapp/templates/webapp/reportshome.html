@@ -17,16 +17,17 @@
 
     {% load static %}
     <!-- vendors -->
-    <link rel="apple-touch-icon" href="{% static 'apple-icon.png' %}">
+{#    <link rel="apple-touch-icon" href="{% static 'apple-icon.png' %}">#}
+    <link rel="apple-touch-icon" href="apple-icon.png">
     <link rel="shortcut icon" href="favicon.ico">
-    <link rel="stylesheet" href="{% 'vendors/bootstrap/dist/css/bootstrap.min.css %}">
-    <link rel="stylesheet" href="{% vendors/font-awesome/css/font-awesome.min.css %}">
-    <link rel="stylesheet" href="{% vendors/themify-icons/css/themify-icons.css %}">
-    <link rel="stylesheet" href="{% vendors/flag-icon-css/css/flag-icon.min.css %}">
-    <link rel="stylesheet" href="{% vendors/selectFX/css/cs-skin-elastic.css %}">
-    <link rel="stylesheet" href="{% vendors/jqvmap/dist/jqvmap.min.css %}">
+    <link rel="stylesheet" href="{% static 'vendors/bootstrap/dist/css/bootstrap.min.css' %}">
+    <link rel="stylesheet" href="{% static 'vendors/font-awesome/css/font-awesome.min.css' %}">
+    <link rel="stylesheet" href="{% static 'vendors/themify-icons/css/themify-icons.css' %}">
+    <link rel="stylesheet" href="{% static 'vendors/flag-icon-css/css/flag-icon.min.css' %}">
+    <link rel="stylesheet" href="{% static 'vendors/selectFX/css/cs-skin-elastic.css' %}">
+    <link rel="stylesheet" href="{% static 'vendors/jqvmap/dist/jqvmap.min.css' %}">
     <!-- css-->
-    <link rel="stylesheet" href="assets/css/style.css %}">
+    <link rel="stylesheet" href="{% static 'webapp/css/style.css' %}">
     <!-- custom font-->
     <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,600,700,800' rel='stylesheet' type='text/css'>
 
@@ -209,7 +210,7 @@
     <script src="{% static 'vendors/jquery/dist/jquery.min.js' %}"></script>
     <script src="{% static 'vendors/popper.js/dist/umd/popper.min.js' %}"></script>
     <script src="{% static 'vendors/bootstrap/dist/js/bootstrap.min.js' %}"></script>
-    <script src="{% static 'assets/js/main.js"></script>
+    <script src="{% static 'assets/js/main.js'%}"></script>
 
 
     <script src="{% static 'vendors/chart.js/dist/Chart.bundle.min.js' %}"></script>
