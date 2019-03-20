@@ -9,26 +9,29 @@
 <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    {% block title %}<title>Production Tracker Dashboard</title>{% endblock %}
+    {% block title %}
+    <title>Production Tracker Dashboard</title>{%end block%}
     <meta name="description" content="Specialty Industries Production Tracker">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
 
+
     {% load static %}
     <!-- vendors -->
-{#    <link rel="apple-touch-icon" href="{% static 'apple-icon.png' %}">#}
-    <link rel="apple-touch-icon" href="apple-icon.png">
+    {#
+    <link rel="apple-touch-icon" href="{% static  'apple-icon.png' %} "> #}
     <link rel="shortcut icon" href="favicon.ico">
-    <link rel="stylesheet" href="{% static 'vendors/bootstrap/dist/css/bootstrap.min.css' %}">
-    <link rel="stylesheet" href="{% static 'vendors/font-awesome/css/font-awesome.min.css' %}">
-    <link rel="stylesheet" href="{% static 'vendors/themify-icons/css/themify-icons.css' %}">
-    <link rel="stylesheet" href="{% static 'vendors/flag-icon-css/css/flag-icon.min.css' %}">
-    <link rel="stylesheet" href="{% static 'vendors/selectFX/css/cs-skin-elastic.css' %}">
-    <link rel="stylesheet" href="{% static 'vendors/jqvmap/dist/jqvmap.min.css' %}">
+    <link rel="stylesheet" href="{% 'vendors/bootstrap/dist/css/bootstrap.min.css' %}">
+    <link rel="stylesheet" href="{% 'vendors/font-awesome/css/font-awesome.min.css' %}">
+    <link rel="stylesheet" href="{% 'vendors/themify-icons/css/themify-icons.css' %}">
+    <link rel="stylesheet" href="{% 'vendors/flag-icon-css/css/flag-icon.min.css' %}">
+    <link rel="stylesheet" href="{% 'vendors/selectFX/css/cs-skin-elastic.css' %}">
+    <link rel="stylesheet" href="{% 'vendors/jqvmap/dist/jqvmap.min.css' %}">
     <!-- css-->
     <link rel="stylesheet" href="{% static 'webapp/css/style.css' %}">
     <!-- custom font-->
     <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,600,700,800' rel='stylesheet' type='text/css'>
+
 
 </head>
 
@@ -55,28 +58,30 @@
                     </li>
                     <h3 class="menu-title">Supervisors</h3><!-- /.menu-title -->
                     <li class="menu-item-has-children dropdown">
-                        <a href="#" class="dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"> <i class="menu-icon fa fa-wpforms"></i>Production Forms</a>
+                        <a href="productionforms.html" class="dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"> <i class="menu-icon fa fa-wpforms"></i>Production Forms</a>
                         <ul class="sub-menu children dropdown-menu">
-                            <li><i class="fa fa-plus-square"></i><a href="ui-buttons.html">New Form</a></li>
-                            <li><i class="fa fa-caret-square-o-left"></i><a href="ui-badges.html">Past Forms</a></li>
+                            <li><i class="fa fa-plus-square"></i><a href="#">New Form</a></li>
+                            <li><i class="fa fa-caret-square-o-left"></i><a href="#">Past Forms</a></li>
 
                         </ul>
                     </li>
                     <li class="menu-item-has-children dropdown">
-                        <a href="#" class="dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"> <i class="menu-icon fa fa-list-alt"></i>Bi-Weekly Report</a>
+                        <a href="biweeklyforms.html" class="dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"> <i class="menu-icon fa fa-list-alt"></i>Bi-Weekly Report</a>
                         <ul class="sub-menu children dropdown-menu">
-                            <li><i class="fa fa-list-alt"></i><a href="tables-basic.html">Current Bi-Weekly</a></li>
-                            <li><i class="fa fa-list-alt"></i><a href="tables-data.html">Past Bi-Weekly </a></li>
+                            <li><i class="fa fa-list-alt"></i><a href="#">Current Bi-Weekly</a></li>
+                            <li><i class="fa fa-list-alt"></i><a href="#">Past Bi-Weekly </a></li>
                         </ul>
+                    </li>
+                    <li class="menu-item-has-children dropdown">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"> <i class="menu-icon fa fa-area-chart"></i>Attendance Report</a>
+
                     </li>
                     <h3 class="menu-title">Account</h3><!-- /.menu-title -->
 
                     <li class="menu-item-has-children dropdown">
-                        <a href="{% url 'logout' %}" class="dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"> <i class="menu-icon fa fa-user"></i>Logout</a>
-                        <ul class="sub-menu children dropdown-menu">
-                            <li><i class="menu-icon fa fa-user"></i><a href="{% url 'logout' %}">Logout</a></li>
+                        <a href="#" aria-haspopup="true" aria-expanded="false"> <i class="menu-icon fa fa-user"></i>Manage Account</a>
+                        <a href="https://www.specialty-industries.com/" aria-haspopup="true" aria-expanded="false"> <i class="menu-icon fa fa-sign-out"></i>Logout</a>
 
-                        </ul>
                     </li>
 
 
@@ -107,66 +112,135 @@
                         </div>
                     </div>
                 </div>
-            </div>
-
-        </header><!-- /header -->
-        <!-- Header-->
-
-
-
-
-
-
-        <div class="container" style="padding-top:175px; padding-left: 175px">
-
-            <div class="media-container-row">
-                <div class="mb-4 content-container col-md-12">
-                    <img src="images/si-logo.png" style="height:150px; padding-left:150px;" alt="Specialty Industries Logo" />
-                    <h1 class="mbr-section-title pb-3 mbr-fonts-style align-center display-3">PRODUCTION TRACKER</h1>
-                    <p class="mbr-text pb-3 mbr-fonts-style p-descr align-center display-5 col-sm-10">
-                        Welcome to the Specialty Industries Production Tracker. The production tracker will enable you to track your daily production logs within the system and manage the week more efficently.
-                        Below you will find links to more information about the production forms, bi-weekly reports and your user information.
-                    </p>
+                <div class="col-sm-5">
+                    <div class="float-right">
+                        <a href="https://www.specialty-industries.com/"> <i class="menu-icon fa fa-sign-out" style="color:black; font-size:large; padding-top: 15px;"></i></a>
+                    </div>
                 </div>
             </div>
 
-            <div class="col-lg-3" style="margin-left:50px;">
+        </header><!-- /header -->
 
-                <span class="fa-stack fa-lg">
-                    <i class="fa fa-circle-thin fa-stack-2x"></i>
-                    <a href="{%  url 'production' %}"> <i class="fa fa-wpforms fa-stack-1x"></i></a>
-                </span>
-                <h3 class="heading">Production Form</h3>
+
+        <div class="breadcrumbs">
+            <div class="col-sm-4">
+                <div class="page-header float-left">
+                    <div class="page-title">
+                        <h1>Dashboard</h1>
+                    </div>
+                </div>
             </div>
-            <div class="col-lg-3">
-
-                <span class="fa-stack fa-lg">
-                    <i class="fa fa-circle-thin fa-stack-2x"></i>
-                    <a href="{%  url 'biweekly' %}"> <i class="fa fa-list-alt fa-stack-1x"></i></a>
-                </span>
-                <h3 class="heading">Bi-Weekly Reports</h3>
+            <div class="col-sm-8">
+                <div class="page-header float-right">
+                    <div class="page-title">
+                        <ol class="breadcrumb text-right">
+                            <li class="active">Supervisior Dashboard</li>
+                        </ol>
+                    </div>
+                </div>
             </div>
-            <div class="col-lg-3">
+        </div>
 
-                <span class="fa-stack fa-lg">
-                    <i class="fa fa-circle-thin fa-stack-2x"></i>
-                    <a href="index.html"> <i class="fa fa-user fa-stack-1x"></i></a>
-                </span>
-                <h3 class="heading">Account Management</h3>
+        <div class="media-container-row">
+            <div class="mb-4 content-container col-md-12">
+
+                <h1 class="mbr-section-title pb-3 mbr-fonts-style align-center display-4"> PRODUCTION TRACKER</h1>
+                <p class="mbr-text pb-3 mbr-fonts-style p-descr align-center display-5 col-sm-10">
+                    Welcome to the Specialty Industries Production Tracker. Below you will find access to daily production forms, the bi-weekly production forms, the attendance report, and the ability to manage your account and change
+                    your password. The production tracker is designed to streamline the internal process for daily operations. If you wish to review past forms you will have up until the lock out time to view these records. After that time
+                    please contact your administrator.
+                </p>
             </div>
         </div>
 
 
+        <div class="col-lg-3 col-md-6">
+            <div class="social-box facebook">
+                <a href="productionforms.html">
+                    <i class="fa fa-wpforms"></i>
+                    <ul>
+
+                        Daily Production Forms
+
+                    </ul>
+                </a>
+            </div>
+
+        </div>
+        <div>
+
+        </div>
+        <div class="col-lg-3 col-md-6">
+            <div class="social-box twitter">
+                <a href="biweeklyforms.html">
+                    <i class="fa fa-list-alt"></i>
+                    <ul>
+                        Bi-Weekly Reports
+                    </ul>
+                </a>
+            </div>
+
+        </div>
+        <div class="col-lg-3 col-md-6">
+            <div class="social-box linkedin">
+                <a href="reportshome.html">
+                    <i class="fa fa-area-chart"></i>
+                    <ul>
+                        Attendence Report
+                    </ul>
+                </a>
+            </div>
+
+        </div>
+        <div class="col-lg-3 col-md-6">
+            <div class="social-box google-plus">
+                <a href="account.html">
+                    <i class="fa fa-user"></i>
+                    <ul>
+                        Manage Account
+                    </ul>
+                </a>
+            </div>
+
+        </div>
     </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
     <!-- Right Panel -->
 
     <script src="{% static 'vendors/jquery/dist/jquery.min.js' %}"></script>
-    <script src="{% static 'vendors/popper.js/dist/umd/popper.min.js' %}"></script>
+    <script src="{% static ' vendors/popper.js/dist/umd/popper.min.js' %}"></script>
+    <script src="{% static ' vendors/popper.js/dist/umd/popper.min.js' %}"></script>
+    <script src="{% static ' vendors/popper.js/dist/umd/popper.min.js' %}"></script>
+    <script src="{% static ' vendors/popper.js/dist/umd/popper.min.js' %}"></script>
     <script src="{% static 'vendors/bootstrap/dist/js/bootstrap.min.js' %}"></script>
-    <script src="{% static 'assets/js/main.js"></script>' %}"></script>
+    <script src="{% static 'assets/js/main.js"></script>
 
 
     <script src="{% static 'vendors/chart.js/dist/Chart.bundle.min.js' %}"></script>

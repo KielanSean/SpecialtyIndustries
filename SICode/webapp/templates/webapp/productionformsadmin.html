@@ -10,25 +10,28 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     {% block title %}
-    <title>Production Forms</title>{% endblock %}
+    <title>Production Forms</title>{%end block%}
     <meta name="description" content="Specialty Industries Production Tracker">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
 
+
     {% load static %}
     <!-- vendors -->
-    <link rel="apple-touch-icon" href="{% static 'apple-icon.png' %}">
+    {#
+    <link rel="apple-touch-icon" href="{% static  'apple-icon.png' %} "> #}
     <link rel="shortcut icon" href="favicon.ico">
-    <link rel="stylesheet" href="{% 'vendors/bootstrap/dist/css/bootstrap.min.css %}">
-    <link rel="stylesheet" href="{% vendors/font-awesome/css/font-awesome.min.css %}">
-    <link rel="stylesheet" href="{% vendors/themify-icons/css/themify-icons.css %}">
-    <link rel="stylesheet" href="{% vendors/flag-icon-css/css/flag-icon.min.css %}">
-    <link rel="stylesheet" href="{% vendors/selectFX/css/cs-skin-elastic.css %}">
-    <link rel="stylesheet" href="{% vendors/jqvmap/dist/jqvmap.min.css %}">
+    <link rel="stylesheet" href="{% 'vendors/bootstrap/dist/css/bootstrap.min.css' %}">
+    <link rel="stylesheet" href="{% 'vendors/font-awesome/css/font-awesome.min.css' %}">
+    <link rel="stylesheet" href="{% 'vendors/themify-icons/css/themify-icons.css' %}">
+    <link rel="stylesheet" href="{% 'vendors/flag-icon-css/css/flag-icon.min.css' %}">
+    <link rel="stylesheet" href="{% 'vendors/selectFX/css/cs-skin-elastic.css' %}">
+    <link rel="stylesheet" href="{% 'vendors/jqvmap/dist/jqvmap.min.css' %}">
     <!-- css-->
-    <link rel="stylesheet" href="assets/css/style.css %}">
+    <link rel="stylesheet" href="{% static 'webapp/css/style.css' %}">
     <!-- custom font-->
     <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,600,700,800' rel='stylesheet' type='text/css'>
+
 
 </head>
 
@@ -39,8 +42,7 @@
 
     <aside id="left-panel" class="left-panel">
         <nav class="navbar navbar-expand-sm navbar-default">
-
-            </div><!-- /.navbar-collapse --><div class="navbar-header">
+            <!-- /.navbar-collapse --><div class="navbar-header">
                 <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#main-menu" aria-controls="main-menu" aria-expanded="false" aria-label="Toggle navigation">
                     <i class="fa fa-bars"></i>
                 </button>
@@ -54,18 +56,19 @@
                     </li>
                     <h3 class="menu-title">Supervisors</h3><!-- /.menu-title -->
                     <li class="menu-item-has-children dropdown">
-                        <a href="productionformsadmin.html" class="dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"> <i class="menu-icon fa fa-wpforms"></i>Production Forms</a>
+                        <a href="Productionformsadmin.html" class="dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"> <i class="menu-icon fa fa-wpforms"></i>Production Forms</a>
                         <ul class="sub-menu children dropdown-menu">
-                            <li><i class="fa fa-plus-square"></i><a href="currentbiweekly.html">New Form</a></li>
-                            <li><i class="fa fa-caret-square-o-left"></i><a href="pastbiweekly.html">Past Forms</a></li>
-
+                            <li><i class="fa fa-plus-square"></i><a href="#">New Form</a></li>
+                            <li><i class="fa fa-caret-square-o-left"></i><a href="#">Past Forms</a></li>
+                            <li><i class="fa fa-unlock"></i><a href="#">Grant Access to Past Daily Forms</a></li>
                         </ul>
                     </li>
                     <li class="menu-item-has-children dropdown">
-                        <a href="biweeklyformsadmin.html" class="dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"> <i class="menu-icon fa fa-list-alt"></i>Bi-Weekly Report</a>
+                        <a href="biweeklyformadmin.html" class="dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"> <i class="menu-icon fa fa-list-alt"></i>Bi-Weekly Report</a>
                         <ul class="sub-menu children dropdown-menu">
-                            <li><i class="fa fa-list-alt"></i><a href="tables-basic.html">Current Bi-Weekly</a></li>
-                            <li><i class="fa fa-list-alt"></i><a href="tables-data.html">Past Bi-Weekly </a></li>
+                            <li><i class="fa fa-list-alt"></i><a href="#">Current Bi-Weekly</a></li>
+                            <li><i class="fa fa-list-alt"></i><a href="#">Past Bi-Weekly </a></li>
+                            <li><i class="fa fa-edit"></i><a href="#">Modify Bi-Weekly </a></li>
                         </ul>
                     </li>
 
@@ -75,16 +78,16 @@
                     <li class="menu-item-has-children dropdown">
                         <a href="employeehome.html" class="dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"> <i class="menu-icon fa fa-users"></i>Employee Management</a>
                         <ul class="sub-menu children dropdown-menu">
-                            <li><i class="menu-icon fa fa-user-plus"></i><a href="newemployee.html">New Employee</a></li>
-                            <li><i class="menu-icon fa fa-wrench"></i><a href="updateemployee.html">Modify Employees</a></li>
+                            <li><i class="menu-icon fa fa-user-plus"></i><a href="#">New Employees</a></li>
+                            <li><i class="menu-icon fa fa-edit"></i><a href="#">Modify Employees</a></li>
                         </ul>
                     </li>
 
                     <li class="menu-item-has-children dropdown">
                         <a href="standardshome.html" class="dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"> <i class="menu-icon fa fa-book"></i>Standards</a>
                         <ul class="sub-menu children dropdown-menu">
-                            <li><i class="menu-icon fa fa-plus-square"></i><a href="newstandard.html">New Standard</a></li>
-                            <li><i class="menu-icon fa fa-edit"></i><a href="updatestandards.html">Modify Standards</a></li>
+                            <li><i class="menu-icon fa fa-plus-square"></i><a href="#">New Standards</a></li>
+                            <li><i class="menu-icon fa fa-edit"></i><a href="#">Modify Standards</a></li>
 
                         </ul>
                     </li>
@@ -92,19 +95,17 @@
                     <li class="menu-item-has-children dropdown">
                         <a href="reportshome.html" class="dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"> <i class="menu-icon fa fa-file-text-o"></i>Reports</a>
                         <ul class="sub-menu children dropdown-menu">
-                            <li><i class="menu-icon fa fa-users"></i><a href="attendance.html">Attendance</a></li>
-                            <li><i class="menu-icon fa fa-file"></i><a href="quarterly.html">Quarterly Production</a></li>
-                            <li><i class="menu-icon fa fa-file-text-o"></i><a href="biweeklyreport.html">Bi-Monthlies</a></li>
+                            <li><i class="menu-icon fa fa-users"></i><a href="#">Attendance</a></li>
+                            <li><i class="menu-icon fa fa-file"></i><a href="#">Quarterly Production</a></li>
+                            <li><i class="menu-icon fa fa-file-text-o"></i><a href="#">Bi-Monthlies</a></li>
                         </ul>
                     </li>
                     <h3 class="menu-title">Account</h3><!-- /.menu-title -->
 
                     <li class="menu-item-has-children dropdown">
-                        <a href="logout.html" class="dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"> <i class="menu-icon fa fa-user"></i>Logout</a>
-                        <ul class="sub-menu children dropdown-menu">
-                            <li><i class="menu-icon fa fa-user"></i><a href="font-fontawesome.html">Logout</a></li>
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"> <i class="menu-icon fa fa-user"></i>Manage Account</a>
+                        <a href="https://www.specialty-industries.com/" aria-haspopup="true" aria-expanded="false"> <i class="menu-icon fa fa-sign-out"></i>Logout</a>
 
-                        </ul>
                     </li>
                 </ul>
             </div><!-- /.navbar-collapse -->
@@ -132,56 +133,86 @@
                         </div>
                     </div>
                 </div>
+                <div class="col-sm-5">
+                    <div class="float-right">
+                        <a href="https://www.specialty-industries.com/"> <i class="menu-icon fa fa-sign-out" style="color:black; font-size:large; padding-top: 15px;"></i></a>
+                    </div>
+                </div>
             </div>
 
-        </header><!-- /header -->
-        <!-- Header-->
+        </header> <!-- /header -->
 
-
-
-
-
-        <div class="container" style="padding-top:175px; padding-left: 175px">
-
-            <div class="media-container-row">
-                <div class="mb-4 content-container col-md-12">
-                    <img src="images/si-logo.png" style="height:150px; padding-left:150px;" alt="Specialty Industries Logo" />
-                    <h1 class="mbr-section-title pb-3 mbr-fonts-style align-center display-3" style="padding-left:45px;">PRODUCTION FORMS</h1>
-                    <p class="mbr-text pb-3 mbr-fonts-style p-descr align-center display-5 col-sm-10">
-                        Welcome to the hub for all of your production forms. The Production Tracker provides quick and easy assess to input and access data to properly and effectively input data for the daily production form and the Bi-weekly forms.
-                        The Daily Production forms are available to edit up until the bi-weekly is submitted. Until that point you are able to make the necessary changes to forms as needed. To access the past daily forms please go to past forms. To create
-                        a new form just click the new form button below or on the menu.
-                    </p>
+        <div class="breadcrumbs">
+            <div class="col-sm-4">
+                <div class="page-header float-left">
+                    <div class="page-title">
+                        <h1>Daily Production Forms</h1>
+                    </div>
                 </div>
-
-
-                <br /><br /><br />
-                <div class="col-lg-3" style="margin-left:50px;">
-
-                    <span class="fa-stack fa-lg">
-                        <i class="fa fa-circle-thin fa-stack-2x"></i>
-                        <a href="newpfform.html"> <i class="fa fa-plus fa-stack-1x"></i></a>
-                    </span>
-                    <h3 class="heading">New Production Form</h3>
-                </div>
-                <div class="col-lg-3">
-
-                    <span class="fa-stack fa-lg">
-                        <i class="fa fa-circle-thin fa-stack-2x"></i>
-                        <a href="index.html"> <i class="fa fa-dashboard fa-stack-1x"></i></a>
-                    </span>
-                    <h3 class="heading">Dashboard</h3>
-                </div>
-                <div class="col-lg-3">
-
-                    <span class="fa-stack fa-lg">
-                        <i class="fa fa-circle-thin fa-stack-2x"></i>
-                        <a href="pastforms.html"> <i class="fa fa-arrow-left fa-stack-1x"></i></a>
-                    </span>
-                    <h3 class="heading">Past Production Forms</h3>
+            </div>
+            <div class="col-sm-8">
+                <div class="page-header float-right">
+                    <div class="page-title">
+                        <ol class="breadcrumb text-right">
+                            <li class="active">Administrator Dashboard</li>
+                        </ol>
+                    </div>
                 </div>
             </div>
         </div>
+
+
+
+
+
+        <div class="media-container-row">
+            <div class="mb-4 content-container col-md-12">
+
+                <h1 class="mbr-section-title pb-3 mbr-fonts-style align-center display-4">DAILY PRODUCTION FORMS</h1>
+                <p class="mbr-text pb-3 mbr-fonts-style p-descr align-center display-5 col-sm-10">
+                    Welcome to the Specialty Industries Production Tracker. Below you will find access to daily production forms, the bi-weekly production forms, the attendance report, and the ability to manage your account and change
+                    your password. The production tracker is designed to streamline the internal process for daily operations.
+                </p>
+            </div>
+        </div>
+
+
+        <div class="col-lg-3 col-md-6">
+            <div class="social-box facebook">
+                <a href="PFNew.html">
+                    <i class="fa fa-plus-square"></i>
+                    <ul>  New Production Form </ul>
+                </a>
+            </div>
+
+        </div>
+        <div>
+
+        </div>
+        <div class="col-lg-3 col-md-6">
+            <div class="social-box twitter">
+                <a href="PFPast.html">
+                    <i class="fa fa-caret-square-o-left"></i>
+                    <ul>
+                        Past Production Forms
+                    </ul>
+                </a>
+            </div>
+
+        </div>
+        <div class="col-lg-3 col-md-6">
+            <div class="social-box linkedin">
+                <a href="reportshome.html">
+                    <i class="fa fa-unlock"></i>
+                    <ul>
+                        Grant Access to Past Forms
+                    </ul>
+                </a>
+            </div>
+
+        </div>
+
+
     </div>
 
 
@@ -207,7 +238,10 @@
 
 
     <script src="{% static 'vendors/jquery/dist/jquery.min.js' %}"></script>
-    <script src="{% static 'vendors/popper.js/dist/umd/popper.min.js' %}"></script>
+    <script src="{% static ' vendors/popper.js/dist/umd/popper.min.js' %}"></script>
+    <script src="{% static ' vendors/popper.js/dist/umd/popper.min.js' %}"></script>
+    <script src="{% static ' vendors/popper.js/dist/umd/popper.min.js' %}"></script>
+    <script src="{% static ' vendors/popper.js/dist/umd/popper.min.js' %}"></script>
     <script src="{% static 'vendors/bootstrap/dist/js/bootstrap.min.js' %}"></script>
     <script src="{% static 'assets/js/main.js"></script>
 
@@ -235,7 +269,7 @@
             });
         })(jQuery);
     </script>
-
 </body>
 
 </html>
+
