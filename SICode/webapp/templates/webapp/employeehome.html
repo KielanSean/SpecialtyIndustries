@@ -10,15 +10,14 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     {% block title %}
-    <title>Employee Management</title>{% endblock %}
+    <title>Employee Management</title>{%end block%}
     <meta name="description" content="Specialty Industries Production Tracker">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
 
     {% load static %}
-    <!-- vendors -->
-{#    <link rel="apple-touch-icon" href="{% static 'apple-icon.png' %}">#}
-    <link rel="apple-touch-icon" href="apple-icon.png">
+    <!-- vendors -->{#
+    <link rel="apple-touch-icon" href="{% static 'apple-icon.png'">#}
     <link rel="shortcut icon" href="favicon.ico">
     <link rel="stylesheet" href="{% static 'vendors/bootstrap/dist/css/bootstrap.min.css' %}">
     <link rel="stylesheet" href="{% static 'vendors/font-awesome/css/font-awesome.min.css' %}">
@@ -27,9 +26,10 @@
     <link rel="stylesheet" href="{% static 'vendors/selectFX/css/cs-skin-elastic.css' %}">
     <link rel="stylesheet" href="{% static 'vendors/jqvmap/dist/jqvmap.min.css' %}">
     <!-- css-->
-    <link rel="stylesheet" href="{% static 'webapp/css/style.css' %}">
+    <link rel="stylesheet" href="{% static 'assets/css/style.css' %}">
     <!-- custom font-->
     <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,600,700,800' rel='stylesheet' type='text/css'>
+
 
 </head>
 
@@ -46,8 +46,8 @@
                 <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#main-menu" aria-controls="main-menu" aria-expanded="false" aria-label="Toggle navigation">
                     <i class="fa fa-bars"></i>
                 </button>
-                <a class="navbar-brand" href="./"><img src="images/logo.png" alt="Logo"></a>
-                <a class="navbar-brand hidden" href="./"><img src="images/logo2.png" alt="Logo"></a>
+                <a class="navbar-brand" href="index2.html"><img src="images/logo.png" alt="Logo"></a>
+                <a class="navbar-brand hidden" href="index2.html"><img src="images/logo2.png" alt="Logo"></a>
             </div>
             <div id="main-menu" class="main-menu collapse navbar-collapse">
                 <ul class="nav navbar-nav">
@@ -115,6 +115,7 @@
     <!-- Left Panel -->
     <!-- Right Panel -->
 
+
     <div id="right-panel" class="right-panel">
 
         <!-- Header-->
@@ -134,55 +135,76 @@
                         </div>
                     </div>
                 </div>
+                <div class="col-sm-5">
+                    <div class="float-right">
+                        <a href="https://www.specialty-industries.com/"> <i class="menu-icon fa fa-sign-out" style="color:black; font-size:large; padding-top: 15px;"></i></a>
+                    </div>
+                </div>
             </div>
 
         </header><!-- /header -->
-        <!-- Header-->
 
 
-
-
-
-        <div class="container" style="padding-top:175px; padding-left: 175px">
-
-            <div class="media-container-row">
-                <div class="mb-4 content-container ">
-                    <img src="images/si-logo.png" style="height:150px; padding-left:175px;" alt="Specialty Industries Logo" />
-                    <h1 class="mbr-section-title pb-3 mbr-fonts-style align-center display-3">EMPLOYEE MANAGEMENT</h1>
-                    <p class="mbr-text pb-3 mbr-fonts-style p-descr align-center display-5 col-sm-10" style="padding-left: 50px;">
-                        Welcome to employee management. This element of the production tracker will allow you to add new employees in the system and modify their data if necessary. This is not designed to be the main form of employee management
-                        but rather a tool to easily get new employees or update current employees in the system so the daily production forms and bi-weekly forms are pull correct and current data.
-                    </p>
+        <div class="breadcrumbs">
+            <div class="col-sm-4">
+                <div class="page-header float-left">
+                    <div class="page-title">
+                        <h1>Employee Management</h1>
+                    </div>
                 </div>
-
-
-                <br /><br /><br />
-                <div class="col-lg-3" style="margin-left:50px;">
-
-                    <span class="fa-stack fa-lg">
-                        <i class="fa fa-circle-thin fa-stack-2x"></i>
-                        <a href="newemployee.html"> <i class="fa fa-user-plus fa-stack-1x"></i></a>
-                    </span>
-                    <h3 class="heading">New Employee</h3>
-                </div>
-                <div class="col-lg-3">
-
-                    <span class="fa-stack fa-lg">
-                        <i class="fa fa-circle-thin fa-stack-2x"></i>
-                        <a href="{% url 'adminindex' %}"> <i class="fa fa-dashboard fa-stack-1x"></i></a>
-                    </span>
-                    <h3 class="heading">Dashboard</h3>
-                </div>
-                <div class="col-lg-3">
-
-                    <span class="fa-stack fa-lg">
-                        <i class="fa fa-circle-thin fa-stack-2x"></i>
-                        <a href="updateemployees.html"> <i class="fa fa-wrench fa-stack-1x"></i></a>
-                    </span>
-                    <h3 class="heading">Modify Employees</h3>
+            </div>
+            <div class="col-sm-8">
+                <div class="page-header float-right">
+                    <div class="page-title">
+                        <ol class="breadcrumb text-right">
+                            <li class="active">Administrator Dashboard</li>
+                        </ol>
+                    </div>
                 </div>
             </div>
         </div>
+
+
+
+        <div class="media-container-row">
+            <div class="mb-4 content-container col-md-12">
+
+                <h1 class="mbr-section-title pb-3 mbr-fonts-style align-center display-4">Employee Management</h1>
+                <p class="mbr-text pb-3 mbr-fonts-style p-descr align-center display-5 col-sm-10">
+                    Employee management allows you to add and modify employee data from within the database. You are able to place employees in an inactive state in order to remove them from the selectable employee
+                    lists. Please be aware this is not created to become an alternative for storing all employee data.
+                </p>
+            </div>
+        </div>
+
+
+        <div class="col-lg-3 col-md-6">
+            <div class="social-box facebook">
+                <a href="productionforms.html">
+                    <i class="fa fa-user-plus"></i>
+                    <ul>
+                        New Employee
+                    </ul>
+                </a>
+            </div>
+
+        </div>
+        <div>
+
+        </div>
+        <div class="col-lg-3 col-md-6">
+            <div class="social-box twitter">
+                <a href="biweeklyforms.html">
+                    <i class="fa fa-wrench"></i>
+                    <ul>
+                        Modify Employees
+                    </ul>
+                </a>
+            </div>
+
+        </div>
+
+
     </div>
 
 
@@ -207,10 +229,12 @@
 
 
 
+    <!-- Right Panel -->
+
     <script src="{% static 'vendors/jquery/dist/jquery.min.js' %}"></script>
     <script src="{% static 'vendors/popper.js/dist/umd/popper.min.js' %}"></script>
     <script src="{% static 'vendors/bootstrap/dist/js/bootstrap.min.js' %}"></script>
-    <script src="{% static 'assets/js/main.js'%}"></script>
+    <script src="{% static 'assets/js/main.js' %}"></script>
 
 
     <script src="{% static 'vendors/chart.js/dist/Chart.bundle.min.js' %}"></script>

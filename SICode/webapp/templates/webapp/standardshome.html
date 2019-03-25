@@ -10,15 +10,14 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     {% block title %}
-    <title>Standards</title>{% endblock %}
+    <title>Standard Management</title>{%end block%}
     <meta name="description" content="Specialty Industries Production Tracker">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
 
-        {% load static %}
-    <!-- vendors -->
-{#    <link rel="apple-touch-icon" href="{% static 'apple-icon.png' %}">#}
-    <link rel="apple-touch-icon" href="apple-icon.png">
+    {% load static %}
+    <!-- vendors -->{#
+    <link rel="apple-touch-icon" href="{% static 'apple-icon.png'">#}
     <link rel="shortcut icon" href="favicon.ico">
     <link rel="stylesheet" href="{% static 'vendors/bootstrap/dist/css/bootstrap.min.css' %}">
     <link rel="stylesheet" href="{% static 'vendors/font-awesome/css/font-awesome.min.css' %}">
@@ -27,9 +26,10 @@
     <link rel="stylesheet" href="{% static 'vendors/selectFX/css/cs-skin-elastic.css' %}">
     <link rel="stylesheet" href="{% static 'vendors/jqvmap/dist/jqvmap.min.css' %}">
     <!-- css-->
-    <link rel="stylesheet" href="{% static 'webapp/css/style.css' %}">
+    <link rel="stylesheet" href="{% static 'assets/css/style.css' %}">
     <!-- custom font-->
     <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,600,700,800' rel='stylesheet' type='text/css'>
+
 
 </head>
 
@@ -38,17 +38,14 @@
 <body id="div-with-bg">
 
 
-    <!-- Left Panel -->
-
     <aside id="left-panel" class="left-panel">
         <nav class="navbar navbar-expand-sm navbar-default">
-
-            </div><!-- /.navbar-collapse --><div class="navbar-header">
+            <!-- /.navbar-collapse --><div class="navbar-header">
                 <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#main-menu" aria-controls="main-menu" aria-expanded="false" aria-label="Toggle navigation">
                     <i class="fa fa-bars"></i>
                 </button>
-                <a class="navbar-brand" href="./"><img src="images/logo.png" alt="Logo"></a>
-                <a class="navbar-brand hidden" href="./"><img src="images/logo2.png" alt="Logo"></a>
+                <a class="navbar-brand" href="index2.html"><img src="images/logo.png" alt="Logo"></a>
+                <a class="navbar-brand hidden" href="index2.html"><img src="images/logo2.png" alt="Logo"></a>
             </div>
             <div id="main-menu" class="main-menu collapse navbar-collapse">
                 <ul class="nav navbar-nav">
@@ -57,18 +54,19 @@
                     </li>
                     <h3 class="menu-title">Supervisors</h3><!-- /.menu-title -->
                     <li class="menu-item-has-children dropdown">
-                        <a href="productionformsadmin.html" class="dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"> <i class="menu-icon fa fa-wpforms"></i>Production Forms</a>
+                        <a href="Productionformsadmin.html" class="dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"> <i class="menu-icon fa fa-file"></i>Production Forms</a>
                         <ul class="sub-menu children dropdown-menu">
-                            <li><i class="fa fa-plus-square"></i><a href="currentbiweekly.html">New Form</a></li>
-                            <li><i class="fa fa-caret-square-o-left"></i><a href="pastbiweekly.html">Past Forms</a></li>
-
+                            <li><i class="fa fa-plus-square"></i><a href="#">New Form</a></li>
+                            <li><i class="fa fa-caret-square-o-left"></i><a href="#">Past Forms</a></li>
+                            <li><i class="fa fa-unlock"></i><a href="#">Grant Access to Past Daily Forms</a></li>
                         </ul>
                     </li>
                     <li class="menu-item-has-children dropdown">
                         <a href="biweeklyformsadmin.html" class="dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"> <i class="menu-icon fa fa-list-alt"></i>Bi-Weekly Report</a>
                         <ul class="sub-menu children dropdown-menu">
-                            <li><i class="fa fa-list-alt"></i><a href="tables-basic.html">Current Bi-Weekly</a></li>
-                            <li><i class="fa fa-list-alt"></i><a href="tables-data.html">Past Bi-Weekly </a></li>
+                            <li><i class="fa fa-list-alt"></i><a href="#">Current Bi-Weekly</a></li>
+                            <li><i class="fa fa-list-alt"></i><a href="#">Past Bi-Weekly </a></li>
+                            <li><i class="fa fa-edit"></i><a href="#">Modify Bi-Weekly </a></li>
                         </ul>
                     </li>
 
@@ -78,16 +76,16 @@
                     <li class="menu-item-has-children dropdown">
                         <a href="employeehome.html" class="dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"> <i class="menu-icon fa fa-users"></i>Employee Management</a>
                         <ul class="sub-menu children dropdown-menu">
-                            <li><i class="menu-icon fa fa-user-plus"></i><a href="newemployee.html">New Employee</a></li>
-                            <li><i class="menu-icon fa fa-wrench"></i><a href="updateemployee.html">Modify Employees</a></li>
+                            <li><i class="menu-icon fa fa-user-plus"></i><a href="#">New Employees</a></li>
+                            <li><i class="menu-icon fa fa-edit"></i><a href="#">Modify Employees</a></li>
                         </ul>
                     </li>
 
                     <li class="menu-item-has-children dropdown">
                         <a href="standardshome.html" class="dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"> <i class="menu-icon fa fa-book"></i>Standards</a>
                         <ul class="sub-menu children dropdown-menu">
-                            <li><i class="menu-icon fa fa-plus-square"></i><a href="newstandard.html">New Standard</a></li>
-                            <li><i class="menu-icon fa fa-edit"></i><a href="updatestandards.html">Modify Standards</a></li>
+                            <li><i class="menu-icon fa fa-plus-square"></i><a href="#">New Standards</a></li>
+                            <li><i class="menu-icon fa fa-edit"></i><a href="#">Modify Standards</a></li>
 
                         </ul>
                     </li>
@@ -95,19 +93,17 @@
                     <li class="menu-item-has-children dropdown">
                         <a href="reportshome.html" class="dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"> <i class="menu-icon fa fa-file-text-o"></i>Reports</a>
                         <ul class="sub-menu children dropdown-menu">
-                            <li><i class="menu-icon fa fa-users"></i><a href="attendance.html">Attendance</a></li>
-                            <li><i class="menu-icon fa fa-file"></i><a href="quarterly.html">Quarterly Production</a></li>
-                            <li><i class="menu-icon fa fa-file-text-o"></i><a href="biweeklyreport.html">Bi-Monthlies</a></li>
+                            <li><i class="menu-icon fa fa-users"></i><a href="#">Attendance</a></li>
+                            <li><i class="menu-icon fa fa-file"></i><a href="#">Quarterly Production</a></li>
+                            <li><i class="menu-icon fa fa-file-text-o"></i><a href="#">Bi-Monthlies</a></li>
                         </ul>
                     </li>
                     <h3 class="menu-title">Account</h3><!-- /.menu-title -->
 
                     <li class="menu-item-has-children dropdown">
-                        <a href="logout.html" class="dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"> <i class="menu-icon fa fa-user"></i>Logout</a>
-                        <ul class="sub-menu children dropdown-menu">
-                            <li><i class="menu-icon fa fa-user"></i><a href="font-fontawesome.html">Logout</a></li>
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"> <i class="menu-icon fa fa-user"></i>Manage Account</a>
+                        <a href="https://www.specialty-industries.com/" aria-haspopup="true" aria-expanded="false"> <i class="menu-icon fa fa-sign-out"></i>Logout</a>
 
-                        </ul>
                     </li>
                 </ul>
             </div><!-- /.navbar-collapse -->
@@ -135,55 +131,88 @@
                         </div>
                     </div>
                 </div>
+                <div class="col-sm-5">
+                    <div class="float-right">
+                        <a href="https://www.specialty-industries.com/"> <i class="menu-icon fa fa-sign-out" style="color:black; font-size:large; padding-top: 15px;"></i></a>
+                    </div>
+                </div>
             </div>
 
         </header><!-- /header -->
-        <!-- Header-->
 
 
-
-
-
-        <div class="container" style="padding-top:175px; padding-left: 175px">
-
-            <div class="media-container-row">
-                <div class="mb-4 content-container ">
-                    <img src="images/si-logo.png" style="height:150px; padding-left:175px;" alt="Specialty Industries Logo" />
-                    <h1 class="mbr-section-title pb-3 mbr-fonts-style align-center display-3">STANDARDS MANAGEMENT</h1>
-                    <p class="mbr-text pb-3 mbr-fonts-style p-descr align-center display-5 col-sm-10" style="padding-left: 50px;">
-                        Welcome to the standard's management system. This system will allow you to easily create new standards into the system so the supervisiors can pull the newest information. You can also update your standard's rates by going to the
-                        modify standards button. This will allow you to update the entire system of standards through a simple form.
-                    </p>
+        <div class="breadcrumbs">
+            <div class="col-sm-4">
+                <div class="page-header float-left">
+                    <div class="page-title">
+                        <h1>Standards Management</h1>
+                    </div>
                 </div>
-
-
-                <br /><br /><br />
-                <div class="col-lg-3" style="margin-left:50px;">
-
-                    <span class="fa-stack fa-lg">
-                        <i class="fa fa-circle-thin fa-stack-2x"></i>
-                        <a href="newstandard.html"> <i class="fa fa-plus fa-stack-1x"></i></a>
-                    </span>
-                    <h3 class="heading">New Standard</h3>
-                </div>
-                <div class="col-lg-3">
-
-                    <span class="fa-stack fa-lg">
-                        <i class="fa fa-circle-thin fa-stack-2x"></i>
-                        <a href="{% url 'adminindex' %}"> <i class="fa fa-dashboard fa-stack-1x"></i></a>
-                    </span>
-                    <h3 class="heading">Dashboard</h3>
-                </div>
-                <div class="col-lg-3">
-
-                    <span class="fa-stack fa-lg">
-                        <i class="fa fa-circle-thin fa-stack-2x"></i>
-                        <a href="updatestandards.html"> <i class="fa fa-edit fa-stack-1x"></i></a>
-                    </span>
-                    <h3 class="heading">Modify Standards</h3>
+            </div>
+            <div class="col-sm-8">
+                <div class="page-header float-right">
+                    <div class="page-title">
+                        <ol class="breadcrumb text-right">
+                            <li class="active">Administrator Dashboard</li>
+                        </ol>
+                    </div>
                 </div>
             </div>
         </div>
+
+
+
+
+
+        <div class="media-container-row">
+            <div class="mb-4 content-container col-md-12">
+
+                <h1 class="mbr-section-title pb-3 mbr-fonts-style align-center display-4">Standards Management</h1>
+                <p class="mbr-text pb-3 mbr-fonts-style p-descr align-center display-5 col-sm-10">
+                   Standards Management allows you to add, modify, and view standards within the database. The modification for standards is simple and updating the master standard will automatically update
+                    all calculated fields accordingly.
+                </p>
+            </div>
+        </div>
+
+
+        <div class="col-lg-3 col-md-6">
+            <div class="social-box facebook">
+                <a href="productionforms.html">
+                    <i class="fa fa-plus-square"></i>
+                    <ul>
+                    New Standard
+                    </ul>
+                </a>
+            </div>
+
+        </div>
+        <div>
+
+        </div>
+        <div class="col-lg-3 col-md-6">
+            <div class="social-box twitter">
+                <a href="biweeklyforms.html">
+                    <i class="fa fa-edit"></i>
+                    <ul>
+                        Modify Standards
+                    </ul>
+                </a>
+            </div>
+
+        </div>
+        <div class="col-lg-3 col-md-6">
+            <div class="social-box linkedin">
+                <a href="#">
+                    <i class="fa fa-book"></i>
+                    <ul>
+                        View Standards
+                    </ul>
+                </a>
+            </div>
+
+        </div>
+       
     </div>
 
 
@@ -213,7 +242,7 @@
     <script src="{% static 'vendors/jquery/dist/jquery.min.js' %}"></script>
     <script src="{% static 'vendors/popper.js/dist/umd/popper.min.js' %}"></script>
     <script src="{% static 'vendors/bootstrap/dist/js/bootstrap.min.js' %}"></script>
-    <script src="{% static 'assets/js/main.js'%}"></script>
+    <script src="{% static 'assets/js/main.js' %}"></script>
 
 
     <script src="{% static 'vendors/chart.js/dist/Chart.bundle.min.js' %}"></script>
