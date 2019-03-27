@@ -2,6 +2,7 @@ from django.db import models
 from django.conf import settings
 from django.contrib.auth.models import Group
 from django.forms import ModelForm
+from django import forms
 from django.urls import reverse
 from django.utils import timezone
 
@@ -11,11 +12,11 @@ class Employee(models.Model):
     first_name = models.CharField(max_length=30, db_index=True)
     last_name = models.CharField(max_length=30, db_index=True)
     emp_id = models.CharField(max_length=9, primary_key=True, db_index=True)
-    address = models.CharField(max_length=30, db_index=True)
+    address = models.CharField(blank=True, max_length=30, db_index=True)
     date_of_birth = models.DateField(blank=True, null=True, db_index=True)
     start_date = models.DateField(blank=True, null=True, db_index=True)
     active_status = models.BooleanField( db_index=True)
-    phone_num = models.CharField(max_length=15, db_index=True)
+    phone_num = models.CharField(blank=True, max_length=15, db_index=True)
 
     class Meta:
         db_table = "employee"
@@ -43,10 +44,11 @@ class Standard(models.Model):
 class EmployeeForm(ModelForm):
     class Meta:
         model = Employee
-        fields = ['first_name', 'last_name', 'address', 'date_of_birth', 'start_date', 'phone_num']
+        fields = ['first_name', 'last_name','emp_id', 'address', 'date_of_birth', 'start_date', 'phone_num','active_status']
         labels = {
             'first_name': 'First Name',
             'last_name': 'Last Name',
+            'emp_id': 'Employee ID',
         }
 
 

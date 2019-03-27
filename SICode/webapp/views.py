@@ -2,11 +2,13 @@ from django.shortcuts import render_to_response, render
 from django.template import RequestContext
 from django.template.backends import django
 from django.contrib.auth import logout
+from django.views.generic import TemplateView
+# from .forms import EmployeeForm
 
 from django.template.context_processors import csrf
 
 
-from webapp.models import Employee, EmployeeForm, Standard, StandardForm
+from .models import Employee, EmployeeForm, Standard, StandardForm
 from django.http import HttpResponse, HttpResponseRedirect
 
 
@@ -94,6 +96,36 @@ def employee_view(request):
 
 def standard_view(request):
     return render(request, 'webapp/standardshome.html')
+
+
+def testemp(request):
+
+    if request.method == "POST":
+        form = EmployeeForm(request.POST)
+        if form.is_valid():
+            print("VALID")
+
+            form.save()
+
+    form = EmployeeForm
+    return render(request, 'webapp/testemp.html', {'form': form})
+
+
+def testempview(request):
+    emps = Employee.objects.all()
+    args = {'emps': emps}
+    return render(request, 'webapp/testempview.html',args)
+
+
+# class EmployeeView(TemplateView):
+#     template_name = 'webapp/testemp.html'
+#
+#     def get(self, request):
+#         form = EmployeeForm()
+#         return render(request,self.template_name, {'empform': form})
+
+
+
 
 
 
