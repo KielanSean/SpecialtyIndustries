@@ -98,6 +98,21 @@ def standard_view(request):
     return render(request, 'webapp/standardshome.html')
 
 
+def create_standard(request):
+    if request.method == "POST":
+        form = StandardForm(request.POST)
+        if form.is_valid():
+            form.save()
+
+    form = StandardForm
+    return render(request, 'webapp/createstandard.html', {'form':form})
+
+def view_standards(request):
+    stands = Standard.objects.all()
+    args = {'stands': stands}
+    return render(request, 'webapp/viewstandard.html', args)
+
+
 def testemp(request):
 
     if request.method == "POST":
@@ -117,12 +132,6 @@ def testempview(request):
     return render(request, 'webapp/testempview.html',args)
 
 
-# class EmployeeView(TemplateView):
-#     template_name = 'webapp/testemp.html'
-#
-#     def get(self, request):
-#         form = EmployeeForm()
-#         return render(request,self.template_name, {'empform': form})
 
 
 

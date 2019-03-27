@@ -1,0 +1,95 @@
+<!doctype html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7" lang=""> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8" lang=""> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9" lang=""> <![endif]-->
+<!--[if gt IE 8]><!-->
+<html class="no-js" lang="en">
+<!--<![endif]-->
+
+<head>
+    {% block title %}<title>Specialty Industries Production Tracker</title>{% endblock %}
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <!-- <title>Specialty Industries Production Tracker</title> -->
+    <meta name="description" content="SI- Production Tracker Login">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="apple-touch-icon" href="apple-icon.png">
+    <link rel="shortcut icon" href="favicon.ico">
+
+    {% load static %}
+	<link rel="stylesheet" href="{% static 'vendors/bootstrap/dist/css/bootstrap.min.css' %}">
+	<link rel="stylesheet" href="{% static 'vendors/font-awesome/css/font-awesome.min.css' %}">
+    <link rel="stylesheet" href="{% static 'vendors/themify-icons/css/themify-icons.css' %}">
+    <link rel="stylesheet" href="{% static 'vendors/flag-icon-css/css/flag-icon.min.css' %}">
+    <link rel="stylesheet" href="{% static 'vendors/selectFX/css/cs-skin-elastic.css' %}">
+
+    <link rel="stylesheet" href="{% static 'webapp/css/style.css' %}">
+
+    <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,600,700,800' rel='stylesheet' type='text/css'>
+
+
+
+</head>
+
+<body class="bg-light">
+
+{% if user.is_authenticated %}
+    <meta http-equiv="REFRESH" content="0; url={% url 'index' %}">
+{% else %}
+
+    <div class="si-login d-flex align-content-center flex-wrap">
+        <div class="container">
+            <div class="login-content">
+                <div class="login-logo">
+                    <a href="index.html">
+                        <img class="align-content" src="{% static 'webapp\images\pt-image.png' %}" alt="">
+                    </a>
+                </div>
+                <div class="login-form">
+                    <form role="form" method="post" action="{% url 'index' %}">
+                        <div class="form-group">
+                        {% if form.errors %}
+                            <div class="alert alert-danger">Your username and password didn't match. Please try again.</div>
+                        {% endif %}
+                            <label class="sr-only" for="username" >Username</label>
+                            <input type="text" class="form-control" id="username" name="username" placeholder="Username" autofocus>
+                        </div>
+                            <div class="form-group">
+                                <label class="sr-only" for="password">Password</label>
+                                <input type="password" class="form-control" id="password" name="password" placeholder="Password" value="">
+                        </div>
+                                <div class="checkbox">
+                                    <label>
+                                        <input name="remember" type="checkbox" value="Remember Me"> Remember Me
+                                    </label>
+                                    <div class="register-link">
+                                        <label class="pull-right ">
+                                            <a href="{% url 'forgot' %}">Forgotten Password?</a>
+                                        </label>
+                                    </div>
+
+                                </div>
+                                <button type="submit" class="btn btn-dark btn-flat m-b-30 m-t-30" value="Login">Sign in
+                                </button>
+
+                                <div class="register-link m-t-15 text-center">
+                                    <p>Don't have account ? <a href="{% url 'index' %}"> Sign Up Here</a></p>
+                                </div>
+                        {% csrf_token %}
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+
+{% endif %}
+
+    <script src="{% static 'vendors/jquery/dist/jquery.min.js' %}"></script>
+    <script src="{% static 'vendors/popper.js/dist/umd/popper.min.js' %}"></script>
+    <script src="{% static 'vendors/bootstrap/dist/js/bootstrap.min.js' %}"></script>
+    <script src="{% static 'webapp/js/main.js' %}"></script>
+
+
+</body>
+
+</html>

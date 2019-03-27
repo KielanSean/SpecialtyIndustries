@@ -10,14 +10,14 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     {% block title %}
-    <title>Standard Management</title>{%end block%}
+    <title>Standard Management</title>{%endblock%}
     <meta name="description" content="Specialty Industries Production Tracker">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
 
     {% load static %}
-    <!-- vendors -->{#
-    <link rel="apple-touch-icon" href="{% static 'apple-icon.png'">#}
+    <!-- vendors -->
+    <link rel="apple-touch-icon" href="{% static 'apple-icon.png'%}">
     <link rel="shortcut icon" href="favicon.ico">
     <link rel="stylesheet" href="{% static 'vendors/bootstrap/dist/css/bootstrap.min.css' %}">
     <link rel="stylesheet" href="{% static 'vendors/font-awesome/css/font-awesome.min.css' %}">
@@ -26,7 +26,7 @@
     <link rel="stylesheet" href="{% static 'vendors/selectFX/css/cs-skin-elastic.css' %}">
     <link rel="stylesheet" href="{% static 'vendors/jqvmap/dist/jqvmap.min.css' %}">
     <!-- css-->
-    <link rel="stylesheet" href="{% static 'assets/css/style.css' %}">
+    <link rel="stylesheet" href="{% static 'webapp/css/style.css' %}">
     <!-- custom font-->
     <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,600,700,800' rel='stylesheet' type='text/css'>
 
@@ -178,7 +178,7 @@
 
         <div class="col-lg-3 col-md-6">
             <div class="social-box facebook">
-                <a href="productionforms.html">
+                <a href="{% url 'createstandard' %}">
                     <i class="fa fa-plus-square"></i>
                     <ul>
                     New Standard
@@ -203,7 +203,7 @@
         </div>
         <div class="col-lg-3 col-md-6">
             <div class="social-box linkedin">
-                <a href="#">
+                <a href="{% url 'viewstandard' %}">
                     <i class="fa fa-book"></i>
                     <ul>
                         View Standards

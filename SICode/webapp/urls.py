@@ -20,6 +20,9 @@ urlpatterns = [
     url(r'^report_view/$', views.report_view, name='report_view'),
     url(r'^testemp/$', views.testemp, name='testemp'),
     url(r'^testempview/$',views.testempview, name='testempview'),
+    url(r'^createstandard/$',views.create_standard,name='createstandard'),
+    url(r'^viewstandard/$',views.view_standards,name='viewstandard'),
+
 
 
 

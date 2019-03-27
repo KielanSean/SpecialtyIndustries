@@ -1,0 +1,17 @@
+{% extends 'webapp/base.html' %}
+
+{% block content %}
+
+
+    {% include 'webapp/left_bar_admin.html' %}
+    <!-- Right Panel -->
+    {% load static %}
+
+
+		<div class="container">
+            {% for stand in stands %}
+                <h4>{{ stand.standard_id }}</h4>
+            {% endfor %}
+		</div>
+
+{%  endblock %}
