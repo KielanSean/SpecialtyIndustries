@@ -5,13 +5,14 @@ from django.forms import ModelForm
 from django import forms
 from django.urls import reverse
 from django.utils import timezone
+import datetime
 
 
 # Create your models here.
 class Employee(models.Model):
+    emp_id = models.AutoField(primary_key=True, db_index=True)
     first_name = models.CharField(max_length=30, db_index=True)
     last_name = models.CharField(max_length=30, db_index=True)
-    emp_id = models.CharField(max_length=9, primary_key=True, db_index=True)
     address = models.CharField(blank=True, max_length=30, db_index=True)
     date_of_birth = models.DateField(blank=True, null=True, db_index=True)
     start_date = models.DateField(blank=True, null=True, db_index=True)
@@ -26,20 +27,30 @@ class Employee(models.Model):
 
 
 class Standard(models.Model):
-    standard_id = models.CharField(max_length=30, db_index=True)
+    standard_id = models.AutoField(primary_key=True, db_index=True)
     job_name = models.CharField(max_length=30,db_index=True)
     units_equal = models.IntegerField(db_index=True)
     num_steps = models.IntegerField(db_index=True)
-    step_id = models.CharField(max_length=3, null=True, db_index=True)
-    company_id = models.CharField(max_length=30, db_index=True, null=True)
     job_description = models.CharField(max_length=200, db_index=True, null=True)
 
     class Meta:
         db_table = "standard"
 
     def __str__(self):
-        return self.standard_id + ": " + self.job_name
+        return self.job_name
 
+class Step(models.Model):
+    step_id = models.CharField(max_length=2, primary_key=True, db_index=True)
+    standard_id = models.ForeignKey(Standard, db_index=True, on_delete=models.CASCADE)
+    units_hr = models.IntegerField(db_index=True)
+    time_each = models.DecimalField(decimal_places=2, max_digits=5, db_index=True)
+    piece_rate = models.DecimalField(decimal_places=4, max_digits=5, db_index=True)
+
+    class Meta:
+        db_table = "step"
+
+    def __str__(self):
+        return self.step_id
 
 class EmployeeForm(ModelForm):
     class Meta:
@@ -63,11 +74,13 @@ class StandardForm(ModelForm):
 
 
 class Report(models.Model):
-    step_id = models.CharField(max_length=3, db_index=True, null=True)
-    standard_id = models.CharField(max_length=30, db_index=True)
+    report_id = models.AutoField(primary_key=True, db_index=True)
+    employee_name = models.ForeignKey(Employee, on_delete=models.CASCADE)
+    standard_id = models.ForeignKey(Standard, on_delete=models.CASCADE)
+    step_id = models.ForeignKey(Step, on_delete=models.CASCADE)
+    date_completed = models.DateField(db_index=True, default=datetime.date.today)
     job_name = models.CharField(max_length=30, db_index=True)
-    employee_name = models.CharField(max_length=40, db_index=True)
-    piece_rate = models.IntegerField(db_index=True, null=True)
+    piece_rate = models.DecimalField(decimal_places=4, max_digits=5, db_index=True)
     hours = models.IntegerField(db_index=True, null=True)
     units_produced = models.IntegerField(db_index=True, null=True)
     absent = models.IntegerField(db_index=True)
@@ -75,7 +88,7 @@ class Report(models.Model):
 class ReportForm(ModelForm):
     class Meta:
         model = Report
-        fields = ['step_id', 'piece_rate', 'standard_id', 'job_name', 'employee_name', 'hours', 'units_produced', 'absent']
+        fields = ['report_id', 'step_id', 'piece_rate', 'standard_id', 'job_name', 'employee_name', 'hours', 'units_produced', 'absent']
         labels = {
             'step_id': 'Step Number',
             'piece_rate': 'Piece Rate',
