@@ -1,6 +1,7 @@
 from django.db import models
 from django.conf import settings
 from django.contrib.auth.models import Group
+from django.db.models import Q
 from django.forms import ModelForm
 from django import forms
 from django.urls import reverse
@@ -16,7 +17,7 @@ class Employee(models.Model):
     address = models.CharField(blank=True, max_length=30, db_index=True)
     date_of_birth = models.DateField(blank=True, null=True, db_index=True)
     start_date = models.DateField(blank=True, null=True, db_index=True)
-    active_status = models.BooleanField( db_index=True)
+    active_status = models.BooleanField( db_index=True, default=True)
     phone_num = models.CharField(blank=True, max_length=15, db_index=True)
 
     class Meta:
@@ -75,7 +76,7 @@ class StandardForm(ModelForm):
 
 class Report(models.Model):
     report_id = models.AutoField(primary_key=True, db_index=True)
-    employee_name = models.ForeignKey(Employee, on_delete=models.CASCADE)
+    employee_name = models.ForeignKey(Employee, on_delete=models.CASCADE, limit_choices_to=Q(active_status=True))
     standard_id = models.ForeignKey(Standard, on_delete=models.CASCADE)
     step_id = models.ForeignKey(Step, on_delete=models.CASCADE)
     date_completed = models.DateField(db_index=True, default=datetime.date.today)
@@ -84,6 +85,11 @@ class Report(models.Model):
     hours = models.IntegerField(db_index=True, null=True)
     units_produced = models.IntegerField(db_index=True, null=True)
     absent = models.IntegerField(db_index=True)
+
+    def save(self):
+        if not self.id:
+            self.piece_rate = Step.piece_rate
+            super(Report, self).save()
 
 class ReportForm(ModelForm):
     class Meta:
