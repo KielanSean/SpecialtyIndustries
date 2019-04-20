@@ -3,7 +3,7 @@ from django.template import RequestContext
 from django.template.backends import django
 from django.contrib.auth import logout
 from django.views.generic import TemplateView, UpdateView
-from SICode.webapp.models import Employee
+# from SICode.webapp.models import Employee
 # from .forms import EmployeeForm
 
 from django.template.context_processors import csrf
