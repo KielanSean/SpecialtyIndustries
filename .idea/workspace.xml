@@ -1,8 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="07125bb0-9452-4237-abe0-6ed96eb5338d" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/Procfile" beforeDir="false" afterPath="$PROJECT_DIR$/Procfile" afterDir="false" />
+    <list default="true" id="07125bb0-9452-4237-abe0-6ed96eb5338d" name="Default Changelist" comment="Updated Models">
+      <change beforePath="$PROJECT_DIR$/.idea/SI.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/SI.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/SICode/webapp/migrations/0001_initial.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/SICode/webapp/migrations/0002_auto_20190205_2237.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/SICode/webapp/migrations/0002_auto_20190225_1026.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/SICode/webapp/migrations/0005_auto_20190206_0801.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/SICode/webapp/migrations/0006_auto_20190206_0812.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/SICode/webapp/migrations/0007_report.py" beforeDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -16,72 +23,65 @@
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/SICode/manage.py">
+        <entry file="file://$PROJECT_DIR$/SICode/webapp/templates/webapp/testempview.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="221">
-              <caret line="14" selection-start-line="14" selection-end-line="14" />
+            <state relative-caret-position="403">
+              <caret line="77" column="14" lean-forward="true" selection-end-line="78" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/SICode/SICode/wsgi.py">
+        <entry file="file://$PROJECT_DIR$/SICode/webapp/templates/webapp/update_employee.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="286">
-              <caret line="17" lean-forward="true" selection-start-line="17" selection-end-line="17" />
-              <folding>
-                <element signature="e#222#231#0" expanded="true" />
-              </folding>
+            <state relative-caret-position="437">
+              <caret line="78" selection-start-line="78" selection-end-line="78" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/SICode/SICode/settings.py">
+        <entry file="file://$PROJECT_DIR$/SICode/webapp/templates/webapp/testemp.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="289">
-              <caret line="89" column="9" selection-start-line="89" selection-start-column="9" selection-end-line="89" selection-end-column="9" />
-              <folding>
-                <element signature="e#307#316#0" expanded="true" />
-              </folding>
+            <state relative-caret-position="233">
+              <caret line="73" column="67" lean-forward="true" selection-start-line="73" selection-start-column="16" selection-end-line="73" selection-end-column="67" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/Procfile">
+        <entry file="file://$PROJECT_DIR$/SICode/webapp/views.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state>
-              <caret column="54" selection-start-column="54" selection-end-column="54" />
+            <state relative-caret-position="425">
+              <caret line="139" lean-forward="true" selection-start-line="139" selection-end-line="139" />
+              <folding>
+                <element signature="e#0#55#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/SICode/webapp/apps.py">
+        <entry file="file://$PROJECT_DIR$/SICode/webapp/models.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="34">
-              <caret line="2" lean-forward="true" selection-start-line="2" selection-end-line="2" />
+            <state relative-caret-position="233">
+              <caret line="89" column="92" lean-forward="true" selection-start-line="89" selection-start-column="92" selection-end-line="89" selection-end-column="92" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/runtime.txt">
+        <entry file="file://$PROJECT_DIR$/SICode/webapp/forms.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state>
-              <caret column="1" selection-start-column="1" selection-end-column="1" />
+            <state relative-caret-position="119">
+              <caret line="7" selection-start-line="7" selection-end-line="7" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/requirements.txt">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="102">
-              <caret line="6" column="10" selection-start-line="6" selection-end-line="6" selection-end-column="10" />
-            </state>
-          </provider>
+        <entry file="file://$PROJECT_DIR$/.gitignore.txt">
+          <provider selected="true" editor-type-id="text-editor" />
         </entry>
       </file>
     </leaf>
@@ -89,6 +89,7 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
+        <option value="Python Script" />
         <option value="HTML File" />
       </list>
     </option>
@@ -97,9 +98,42 @@
     <findStrings>
       <find>webapp_employee</find>
       <find>AF_</find>
+      <find>page-login</find>
+      <find>apple</find>
+      <find>registration</find>
+      <find>accounts</find>
+      <find>login.html</find>
+      <find>templates</find>
+      <find>SIcode.</find>
+      <find>contrib.auth</find>
+      <find>hal</find>
+      <find>f_name</find>
+      <find>twitter_cor</find>
+      <find>first_</find>
+      <find>first_name</find>
+      <find>home</find>
+      <find>index</find>
+      <find>submit</find>
+      <find>auth_logou</find>
+      <find>logou</find>
+      <find>href</find>
+      <find>{%</find>
     </findStrings>
+    <replaceStrings>
+      <replace />
+    </replaceStrings>
+    <dirStrings>
+      <dir>C:\Users\Kielan Sullivan\Desktop\SI\SICode\webapp\static\webapp</dir>
+    </dirStrings>
   </component>
   <component name="Git.Settings">
+    <option name="PREVIOUS_COMMIT_AUTHORS">
+      <list>
+        <option value="KielanSean &lt;kielansean@gmail.com&gt;" />
+        <option value="Kielan Sullivan &lt;kielansean@gmail.com&gt;" />
+      </list>
+    </option>
+    <option name="UPDATE_TYPE" value="MERGE" />
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="IdeDocumentHistory">
@@ -110,16 +144,62 @@
         <option value="$PROJECT_DIR$/runtime.txt" />
         <option value="$PROJECT_DIR$/SICode/SICode/wsgi.py" />
         <option value="$USER_HOME$/AppData/Local/Programs/Python/Python37/Lib/site-packages/gunicorn/util.py" />
-        <option value="$PROJECT_DIR$/SICode/SICode/settings.py" />
+        <option value="$PROJECT_DIR$/SICode/templates/page-login.html" />
+        <option value="$PROJECT_DIR$/SICode/webapp/templates/webapp/home.html" />
+        <option value="$PROJECT_DIR$/SICode/webapp/templates/webapp/login.html" />
+        <option value="$PROJECT_DIR$/SICode/webapp/templates/registration/login.html" />
+        <option value="$PROJECT_DIR$/SICode/webapp/static/vendors/gaugejs/assets/bootstrap.min.css" />
+        <option value="$PROJECT_DIR$/SICode/webapp/templates/webapp/page-forget.html" />
+        <option value="$PROJECT_DIR$/SICode/webapp/templates/webapp/page-register.html" />
+        <option value="$PROJECT_DIR$/SICode/webapp/migrations/0002_auto_20190205_2237.py" />
+        <option value="$PROJECT_DIR$/SICode/webapp/admin.py" />
+        <option value="$PROJECT_DIR$/SICode/webapp/static/webapp/css/style.css" />
+        <option value="$PROJECT_DIR$/SICode/webapp/migrations/0001_initial.py" />
+        <option value="$PROJECT_DIR$/SICode/webapp/migrations/0005_auto_20190206_0801.py" />
+        <option value="$PROJECT_DIR$/SICode/webapp/migrations/0003_auto_20190206_0728.py" />
+        <option value="$PROJECT_DIR$/SICode/webapp/migrations/0004_auto_20190206_0729.py" />
         <option value="$PROJECT_DIR$/Procfile" />
+        <option value="$PROJECT_DIR$/SICode/webapp/templates/webapp/create_employee.html" />
+        <option value="$PROJECT_DIR$/SICode/webapp/templates/webapp/page-logout.html" />
+        <option value="$PROJECT_DIR$/SICode/SICode/urls.py" />
+        <option value="$PROJECT_DIR$/SICode/webapp/templates/webapp/page-login.html" />
+        <option value="$PROJECT_DIR$/SICode/webapp/templates/webapp/reportshome.html" />
+        <option value="$PROJECT_DIR$/SICode/webapp/reports/models.py" />
+        <option value="$PROJECT_DIR$/SICode/webapp/reports/urls.py" />
+        <option value="$PROJECT_DIR$/SICode/webapp/reports/utils.py" />
+        <option value="$PROJECT_DIR$/SICode/webapp/fields.py" />
+        <option value="$PROJECT_DIR$/requirements.txt" />
+        <option value="$PROJECT_DIR$/SICode/webapp/reports/forms.py" />
+        <option value="$PROJECT_DIR$/SICode/webapp/templates/webapp/index.html" />
+        <option value="$PROJECT_DIR$/SICode/webapp/templates/webapp/productionforms.html" />
+        <option value="$PROJECT_DIR$/SICode/webapp/templates/webapp/biweeklyforms.html" />
+        <option value="$PROJECT_DIR$/SICode/webapp/templates/webapp/biweeklyformsadmin.html" />
+        <option value="$PROJECT_DIR$/SICode/webapp/forms.py" />
+        <option value="$PROJECT_DIR$/SICode/webapp/templates/webapp/index2.html" />
+        <option value="$PROJECT_DIR$/SICode/SICode/settings.py" />
+        <option value="$PROJECT_DIR$/SICode/webapp/templates/webapp/left_bar.html" />
+        <option value="$PROJECT_DIR$/SICode/webapp/templates/webapp/base.html" />
+        <option value="$PROJECT_DIR$/SICode/webapp/templates/webapp/left_bar_admin.html" />
+        <option value="$PROJECT_DIR$/SICode/webapp/templates/webapp/testemp.html" />
+        <option value="$PROJECT_DIR$/SICode/webapp/templates/webapp/employeehome.html" />
+        <option value="$PROJECT_DIR$/SICode/webapp/templates/webapp/createstandard.html" />
+        <option value="$PROJECT_DIR$/SICode/webapp/urls.py" />
+        <option value="$PROJECT_DIR$/SICode/webapp/templates/webapp/standardshome.html" />
+        <option value="$PROJECT_DIR$/SICode/webapp/templates/webapp/viewstandard.html" />
+        <option value="$PROJECT_DIR$/SICode/webapp/models.py" />
+        <option value="$PROJECT_DIR$/SICode/webapp/templates/webapp/testempview.html" />
+        <option value="$PROJECT_DIR$/SICode/webapp/templates/webapp/update_employee.html" />
+        <option value="$PROJECT_DIR$/SICode/webapp/views.py" />
       </list>
     </option>
   </component>
-  <component name="ProjectFrameBounds">
-    <option name="x" value="85" />
-    <option name="y" value="25" />
-    <option name="width" value="1750" />
-    <option name="height" value="980" />
+  <component name="ProjectFrameBounds" extendedState="6">
+    <option name="x" value="950" />
+    <option name="width" value="979" />
+    <option name="height" value="1040" />
+  </component>
+  <component name="ProjectLevelVcsManager">
+    <OptionsSetting value="false" id="Update" />
   </component>
   <component name="ProjectView">
     <navigator proportions="" version="1">
@@ -148,13 +228,38 @@
               <item name="SI" type="b2602c69:ProjectViewProjectNode" />
               <item name="SI" type="462c0819:PsiDirectoryNode" />
               <item name="SICode" type="462c0819:PsiDirectoryNode" />
-              <item name="templates" type="462c0819:PsiDirectoryNode" />
+              <item name="webapp" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="SI" type="b2602c69:ProjectViewProjectNode" />
               <item name="SI" type="462c0819:PsiDirectoryNode" />
               <item name="SICode" type="462c0819:PsiDirectoryNode" />
               <item name="webapp" type="462c0819:PsiDirectoryNode" />
+              <item name="migrations" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="SI" type="b2602c69:ProjectViewProjectNode" />
+              <item name="SI" type="462c0819:PsiDirectoryNode" />
+              <item name="SICode" type="462c0819:PsiDirectoryNode" />
+              <item name="webapp" type="462c0819:PsiDirectoryNode" />
+              <item name="static" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="SI" type="b2602c69:ProjectViewProjectNode" />
+              <item name="SI" type="462c0819:PsiDirectoryNode" />
+              <item name="SICode" type="462c0819:PsiDirectoryNode" />
+              <item name="webapp" type="462c0819:PsiDirectoryNode" />
+              <item name="static" type="462c0819:PsiDirectoryNode" />
+              <item name="webapp" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="SI" type="b2602c69:ProjectViewProjectNode" />
+              <item name="SI" type="462c0819:PsiDirectoryNode" />
+              <item name="SICode" type="462c0819:PsiDirectoryNode" />
+              <item name="webapp" type="462c0819:PsiDirectoryNode" />
+              <item name="static" type="462c0819:PsiDirectoryNode" />
+              <item name="webapp" type="462c0819:PsiDirectoryNode" />
+              <item name="images" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -167,8 +272,17 @@
     <property name="DefaultHtmlFileTemplate" value="HTML File" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="js.buildTools.gulp.gulp_package_dir" value="" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/SICode/manage.py" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="settings.editor.selected.configurable" value="com.jetbrains.django.DjangoModulesConfigurable" />
+  </component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\Kielan Sullivan\Desktop\SI\SICode\webapp\static" />
+      <recent name="C:\Users\Kielan Sullivan\Desktop\SI\SICode\webapp\static\vendors\gaugejs\img" />
+      <recent name="C:\Users\Kielan Sullivan\Desktop\SI\SICode\webapp\templates\webapp" />
+      <recent name="C:\Users\Kielan Sullivan\Desktop\SI\SICode\webapp\templates\registration" />
+      <recent name="C:\Users\Kielan Sullivan\Desktop\SI\SICode\webapp\templates" />
+    </key>
   </component>
   <component name="RunDashboard">
     <option name="ruleStates">
@@ -229,208 +343,467 @@
       <updated>1546466628741</updated>
       <workItem from="1546466633133" duration="2578000" />
       <workItem from="1547746158953" duration="1548000" />
-      <workItem from="1547750833813" duration="12278000" />
+      <workItem from="1547750833813" duration="14031000" />
+      <workItem from="1548357163789" duration="20000" />
+      <workItem from="1548357252852" duration="22708000" />
+      <workItem from="1549399942839" duration="20799000" />
+      <workItem from="1550151548584" duration="76000" />
+      <workItem from="1551121058661" duration="20811000" />
+      <workItem from="1552574451999" duration="2549000" />
+      <workItem from="1552595461130" duration="5690000" />
+      <workItem from="1552672856750" duration="250000" />
+      <workItem from="1552681017860" duration="2252000" />
+      <workItem from="1553655656303" duration="19386000" />
+      <workItem from="1554753759006" duration="5112000" />
+      <workItem from="1555770147975" duration="4008000" />
     </task>
+    <task id="LOCAL-00001" summary="Added standard backend. Added site movement as well.">
+      <created>1549429161677</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1549429161678</updated>
+    </task>
+    <task id="LOCAL-00002" summary="Updated Models">
+      <created>1549460035260</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1549460035260</updated>
+    </task>
+    <task id="LOCAL-00003" summary="Updated Models">
+      <created>1549462559358</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1549462559358</updated>
+    </task>
+    <task id="LOCAL-00004" summary="Updated Migrations">
+      <created>1549463084596</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1549463084596</updated>
+    </task>
+    <task id="LOCAL-00005" summary="Updated site traversal, user authentication">
+      <created>1551215364207</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1551215364207</updated>
+    </task>
+    <task id="LOCAL-00006" summary="Updated Models">
+      <created>1551216345971</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1551216345971</updated>
+    </task>
+    <task id="LOCAL-00007" summary="Fixed HTML and added forms to Pages &gt; Employees">
+      <created>1553670777841</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1553670777841</updated>
+    </task>
+    <task id="LOCAL-00008" summary="Updated Testing HTML">
+      <created>1553671282825</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1553671282825</updated>
+    </task>
+    <task id="LOCAL-00009" summary="Template Syntax Update and Standard view">
+      <created>1553693445255</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1553693445255</updated>
+    </task>
+    <task id="LOCAL-00010" summary="Updated Reports, Employee Displays">
+      <created>1555779078736</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1555779078736</updated>
+    </task>
+    <option name="localTasksCounter" value="11" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="16404000" />
+    <option name="totallyTimeSpent" value="121818000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="68" y="20" width="1400" height="784" extended-state="0" />
+    <frame x="-7" y="-7" width="1550" height="838" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.25746268" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.19530201" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
-      <window_info anchor="bottom" id="Find" order="1" />
+      <window_info anchor="bottom" id="Find" order="1" weight="0.3286119" />
       <window_info anchor="bottom" id="Run" order="2" weight="0.3297546" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" />
       <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
-      <window_info anchor="bottom" id="Version Control" order="8" />
+      <window_info anchor="bottom" id="Version Control" order="8" weight="0.3286119" />
       <window_info anchor="bottom" id="Database Changes" order="9" />
       <window_info anchor="bottom" id="Event Log" order="10" sideWeight="0.50074625" side_tool="true" weight="0.33128834" />
-      <window_info active="true" anchor="bottom" id="Terminal" order="11" sideWeight="0.49925372" visible="true" weight="0.33128834" />
-      <window_info anchor="bottom" id="Python Console" order="12" weight="0.3297546" />
+      <window_info anchor="bottom" id="Terminal" order="11" sideWeight="0.49925372" visible="true" weight="0.19263457" />
+      <window_info anchor="bottom" id="Python Console" order="12" weight="0.3286119" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
       <window_info anchor="right" id="SciView" order="3" />
       <window_info anchor="right" id="Database" order="4" />
     </layout>
+    <layout-to-restore>
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.1704698" />
+      <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
+      <window_info id="Favorites" order="2" side_tool="true" />
+      <window_info anchor="bottom" id="Message" order="0" />
+      <window_info anchor="bottom" id="Find" order="1" weight="0.3286119" />
+      <window_info anchor="bottom" id="Run" order="2" weight="0.3297546" />
+      <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
+      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
+      <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
+      <window_info anchor="bottom" id="TODO" order="6" />
+      <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
+      <window_info anchor="bottom" id="Version Control" order="8" weight="0.3286119" />
+      <window_info anchor="bottom" id="Database Changes" order="9" />
+      <window_info anchor="bottom" id="Event Log" order="10" sideWeight="0.50074625" side_tool="true" weight="0.33128834" />
+      <window_info active="true" anchor="bottom" id="Terminal" order="11" sideWeight="0.49925372" visible="true" weight="0.19263457" />
+      <window_info anchor="bottom" id="Python Console" order="12" weight="0.3286119" />
+      <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
+      <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
+      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
+      <window_info anchor="right" id="SciView" order="3" />
+      <window_info anchor="right" id="Database" order="4" />
+    </layout-to-restore>
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="1" />
   </component>
+  <component name="UnknownFeatures">
+    <option featureType="com.intellij.fileTypeFactory" implementationName="*.log" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State>
+              <option name="RECENTLY_FILTERED_USER_GROUPS">
+                <collection />
+              </option>
+              <option name="RECENTLY_FILTERED_BRANCH_GROUPS">
+                <collection />
+              </option>
+              <option name="COLUMN_ORDER">
+                <list>
+                  <option value="0" />
+                  <option value="1" />
+                  <option value="2" />
+                  <option value="3" />
+                </list>
+              </option>
+            </State>
+          </value>
+        </entry>
+      </map>
+    </option>
+    <option name="RECENT_FILTERS">
+      <map>
+        <entry key="Branch">
+          <value>
+            <list />
+          </value>
+        </entry>
+        <entry key="User">
+          <value>
+            <list />
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="Added standard backend. Added site movement as well." />
+    <MESSAGE value="Updated Migrations" />
+    <MESSAGE value="Updated site traversal, user authentication" />
+    <MESSAGE value="Updated Models" />
+    <MESSAGE value="Fixed HTML and added forms to Pages &gt; Employees" />
+    <MESSAGE value="Updated Testing HTML" />
+    <MESSAGE value="Template Syntax Update and Standard view" />
+    <MESSAGE value="Updated Reports, Employee Displays" />
+    <option name="LAST_COMMIT_MESSAGE" value="Updated Reports, Employee Displays" />
+  </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/SICode/SICode/__init__.py">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Specialty Industries Website/page-login.html">
+    <entry file="file://$PROJECT_DIR$/SICode/webapp/migrations/0004_auto_20190206_0729.py" />
+    <entry file="file://$PROJECT_DIR$/SICode/webapp/apps.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-408" />
+        <state relative-caret-position="34">
+          <caret line="2" selection-start-line="2" selection-end-line="2" />
+        </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/SICode/webapp/migrations/__init__.py">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/SICode/webapp/migrations/0001_initial.py">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/SICode/.idea/SICode.iml">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/SICode/webapp/urls.py">
+    <entry file="file://$PROJECT_DIR$/SICode/webapp/migrations/0007_report.py" />
+    <entry file="file://$PROJECT_DIR$/SICode/webapp/migrations/0005_auto_20190206_0801.py" />
+    <entry file="file://$PROJECT_DIR$/SICode/webapp/migrations/0006_auto_20190206_0812.py" />
+    <entry file="file://$PROJECT_DIR$/SICode/SICode/urls.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state>
+        <state relative-caret-position="146">
+          <caret line="25" column="88" lean-forward="true" selection-start-line="25" selection-start-column="88" selection-end-line="25" selection-end-column="88" />
           <folding>
-            <element signature="e#0#28#0" expanded="true" />
+            <element signature="e#630#662#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/SICode/webapp/tests.py">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/SICode/webapp/models.py">
+    <entry file="file://$PROJECT_DIR$/SICode/webapp/templates/webapp/reportshome.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-156">
-          <caret line="7" lean-forward="true" selection-start-line="7" selection-end-line="7" />
-          <folding>
-            <element signature="e#0#28#0" expanded="true" />
-          </folding>
+        <state relative-caret-position="344">
+          <caret line="223" column="25" selection-start-line="223" selection-start-column="25" selection-end-line="223" selection-end-column="25" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/SICode/webapp/__init__.py">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
-    <entry file="file://$USER_HOME$/AppData/Local/Programs/Python/Python37/Lib/site-packages/django/db/backends/postgresql/base.py">
+    <entry file="file://$PROJECT_DIR$/SICode/webapp/reports/__init__.py" />
+    <entry file="file://$PROJECT_DIR$/SICode/webapp/reports/forms.py" />
+    <entry file="file://$PROJECT_DIR$/SICode/webapp/reports/models.py" />
+    <entry file="file://$PROJECT_DIR$/SICode/webapp/reports/urls.py" />
+    <entry file="file://$PROJECT_DIR$/SICode/webapp/reports/utils.py" />
+    <entry file="file://$PROJECT_DIR$/SICode/webapp/reports/views.py" />
+    <entry file="file://$PROJECT_DIR$/SICode/webapp/fields.py" />
+    <entry file="file://$PROJECT_DIR$/SICode/webapp/migrations/0002_auto_20190205_2237.py" />
+    <entry file="file://$PROJECT_DIR$/SICode/webapp/migrations/0002_auto_20190225_1026.py" />
+    <entry file="file://$PROJECT_DIR$/SICode/webapp/static/webapp/images/logo.png">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/SICode/webapp/templates/webapp/productionforms.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="4709">
-          <caret line="283" selection-end-line="283" />
+        <state relative-caret-position="885">
+          <caret line="236" column="12" lean-forward="true" selection-start-line="236" selection-start-column="12" selection-end-line="236" selection-end-column="12" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/SICode/webapp/templates/webapp/biweeklyforms.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="542">
+          <caret line="236" column="36" lean-forward="true" selection-start-line="236" selection-start-column="36" selection-end-line="236" selection-end-column="36" />
           <folding>
-            <element signature="e#105#121#0" expanded="true" />
+            <element signature="e#5941#5997#0#HTML" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/SICode/webapp/views.py">
+    <entry file="file://$PROJECT_DIR$/SICode/webapp/templates/webapp/page-login.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="595">
-          <caret line="35" column="45" selection-start-line="35" selection-start-column="45" selection-end-line="35" selection-end-column="45" />
+        <state>
+          <caret line="51" column="48" lean-forward="true" selection-start-line="51" selection-start-column="48" selection-end-line="51" selection-end-column="48" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/SICode/webapp/templates/webapp/biweeklyformsadmin.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="51">
+          <caret line="36" column="23" lean-forward="true" selection-start-line="36" selection-start-column="23" selection-end-line="36" selection-end-column="23" />
           <folding>
-            <element signature="e#0#55#0" expanded="true" />
+            <element signature="e#7956#8012#0#HTML" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/SICode/webapp/admin.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="51">
-          <caret line="3" column="23" selection-start-line="3" selection-start-column="23" selection-end-line="3" selection-end-column="23" />
+        <state relative-caret-position="85">
+          <caret line="5" column="1" selection-start-line="5" selection-start-column="1" selection-end-line="5" selection-end-column="1" />
           <folding>
             <element signature="e#0#32#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/SICode/SICode/urls.py">
+    <entry file="file://$PROJECT_DIR$/SICode/webapp/templates/webapp/create_employee.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="170">
+          <caret line="10" column="8" lean-forward="true" selection-start-line="10" selection-start-column="8" selection-end-line="10" selection-end-column="8" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/SICode/webapp/templates/webapp/employee.html">
       <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/SICode/templates/base.html">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/SICode/templates/home.html">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/SICode/templates/static.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="17">
-          <caret line="1" lean-forward="true" selection-start-line="1" selection-end-line="1" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/requirements.txt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="102">
-          <caret line="6" column="10" selection-start-line="6" selection-end-line="6" selection-end-column="10" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$USER_HOME$/AppData/Local/Programs/Python/Python37/Lib/site-packages/whitenoise/__init__.py">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/SICode/manage.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="221">
-          <caret line="14" selection-start-line="14" selection-end-line="14" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/runtime.txt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <caret column="1" selection-start-column="1" selection-end-column="1" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$USER_HOME$/AppData/Local/Programs/Python/Python37/Lib/site-packages/gunicorn/sock.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="102">
-          <caret line="14" lean-forward="true" selection-start-line="14" selection-end-line="14" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$USER_HOME$/AppData/Local/Programs/Python/Python37/Lib/runpy.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="137">
-          <caret line="192" selection-start-line="192" selection-end-line="192" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$USER_HOME$/AppData/Local/Programs/Python/Python37/Lib/site-packages/gunicorn/util.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="136">
-          <caret line="8" selection-start-line="8" selection-end-line="8" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/SICode/webapp/apps.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="34">
-          <caret line="2" lean-forward="true" selection-start-line="2" selection-end-line="2" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/SICode/SICode/wsgi.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="286">
-          <caret line="17" lean-forward="true" selection-start-line="17" selection-end-line="17" />
-          <folding>
-            <element signature="e#222#231#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/SICode/SICode/settings.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="289">
-          <caret line="89" column="9" selection-start-line="89" selection-start-column="9" selection-end-line="89" selection-end-column="9" />
+        <state relative-caret-position="256">
+          <caret line="43" selection-start-line="43" selection-end-line="43" />
           <folding>
             <element signature="e#307#316#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/SICode/webapp/templates/webapp/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-476">
+          <caret line="51" lean-forward="true" selection-start-line="51" selection-end-line="51" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/SICode/webapp/templates/webapp/page-logout.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1598">
+          <caret line="94" column="7" lean-forward="true" selection-start-line="94" selection-start-column="7" selection-end-line="94" selection-end-column="7" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/SICode/webapp/templates/webapp/index2.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="340">
+          <caret line="108" column="12" lean-forward="true" selection-start-line="38" selection-start-column="3" selection-end-line="108" selection-end-column="12" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/SICode/webapp/templates/webapp/base.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="488">
+          <caret line="34" selection-start-line="34" selection-end-line="34" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/SICode/webapp/templates/webapp/left_bar_admin.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="204">
+          <caret line="12" column="39" lean-forward="true" selection-start-line="12" selection-start-column="39" selection-end-line="12" selection-end-column="39" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/SICode/webapp/templates/webapp/createstandard.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="272">
+          <caret line="16" column="4" selection-start-line="16" selection-start-column="4" selection-end-line="16" selection-end-column="4" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/SICode/webapp/templates/webapp/viewstandard.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="204">
+          <caret line="12" column="40" selection-start-line="12" selection-start-column="29" selection-end-line="12" selection-end-column="40" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/SICode/webapp/templates/webapp/standardshome.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="3553">
+          <caret line="209" column="25" selection-start-line="209" selection-start-column="25" selection-end-line="209" selection-end-column="25" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/SICode/webapp/templates/static.html">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/SICode/webapp/templates/debug.log">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/SICode/webapp/migrations/0001_initial.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="884">
+          <caret line="52" selection-start-line="52" selection-end-line="53" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/SICode/webapp/urls.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="391">
+          <caret line="26" selection-start-line="26" selection-end-line="26" />
+          <folding>
+            <element signature="e#0#41#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/SICode/webapp/templates/webapp/employeehome.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="901">
+          <caret line="53" column="67" selection-start-line="53" selection-start-column="67" selection-end-line="53" selection-end-column="67" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/SICode/webapp/forms.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="119">
+          <caret line="7" selection-start-line="7" selection-end-line="7" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Special">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-135" />
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/Procfile">
       <provider selected="true" editor-type-id="text-editor">
         <state>
-          <caret column="54" selection-start-column="54" selection-end-column="54" />
+          <caret column="23" selection-start-column="23" selection-end-column="23" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/SICode/webapp/models.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="233">
+          <caret line="89" column="92" lean-forward="true" selection-start-line="89" selection-start-column="92" selection-end-line="89" selection-end-column="92" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/SICode/webapp/templates/webapp/testemp.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="233">
+          <caret line="73" column="67" lean-forward="true" selection-start-line="73" selection-start-column="16" selection-end-line="73" selection-end-column="67" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/SICode/webapp/templates/webapp/testempview.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="403">
+          <caret line="77" column="14" lean-forward="true" selection-end-line="78" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/SICode/webapp/templates/webapp/update_employee.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="437">
+          <caret line="78" selection-start-line="78" selection-end-line="78" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/requirements.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret column="22" selection-start-column="22" selection-end-column="22" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/runtime.txt">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/.gitignore.txt">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/SICode/webapp/views.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="425">
+          <caret line="139" lean-forward="true" selection-start-line="139" selection-end-line="139" />
+          <folding>
+            <element signature="e#0#55#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>

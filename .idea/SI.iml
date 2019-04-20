@@ -22,6 +22,7 @@
     <option name="TEMPLATE_FOLDERS">
       <list>
         <option value="$MODULE_DIR$/SICode/templates" />
+        <option value="$MODULE_DIR$/SICode/webapp/templates" />
       </list>
     </option>
   </component>
