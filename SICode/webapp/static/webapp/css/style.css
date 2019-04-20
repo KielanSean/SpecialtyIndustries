@@ -1024,7 +1024,7 @@ aside.left-panel {
   -webkit-transition:width 0.3s ease;
   transition: width 0.3s ease; }
 #div-with-bg {
-    background-image: url('images/bg.jpg');
+
     background-color: rgba(0,0,0,0.1);
 }
 .navbar {
