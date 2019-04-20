@@ -86,16 +86,20 @@ class Report(models.Model):
     units_produced = models.IntegerField(db_index=True, null=True)
     absent = models.IntegerField(db_index=True)
 
-    def save(self):
-        if not self.id:
-            self.piece_rate = Step.piece_rate
-            super(Report, self).save()
+    def __str__(self):
+        return self.date_completed.strftime('%m/%d/%Y') + " " + self.employee_name.last_name
+
+    # def save(self):
+    #     if not self.report_id:
+    #         self.piece_rate = Step.piece_rate
+    #         super(Report, self).save()
 
 class ReportForm(ModelForm):
     class Meta:
         model = Report
         fields = ['report_id', 'step_id', 'piece_rate', 'standard_id', 'job_name', 'employee_name', 'hours', 'units_produced', 'absent']
         labels = {
+            'report_id': 'Report ID',
             'step_id': 'Step Number',
             'piece_rate': 'Piece Rate',
             'standard_id': 'Standard Number',

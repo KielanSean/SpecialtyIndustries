@@ -2,7 +2,8 @@ from django.shortcuts import render_to_response, render
 from django.template import RequestContext
 from django.template.backends import django
 from django.contrib.auth import logout
-from django.views.generic import TemplateView
+from django.views.generic import TemplateView, UpdateView
+from SICode.webapp.models import Employee
 # from .forms import EmployeeForm
 
 from django.template.context_processors import csrf
@@ -107,6 +108,7 @@ def create_standard(request):
     form = StandardForm
     return render(request, 'webapp/createstandard.html', {'form':form})
 
+
 def view_standards(request):
     stands = Standard.objects.all()
     args = {'stands': stands}
@@ -130,6 +132,11 @@ def testempview(request):
     emps = Employee.objects.all()
     args = {'emps': emps}
     return render(request, 'webapp/testempview.html',args)
+
+
+def EmployeeUpdate(UpdateView):
+    model = Employee
+    fields = ['first_name']
 
 
 
